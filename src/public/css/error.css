@@ -1,0 +1,33 @@
+.container-error{
+    min-height: 720px;
+    max-height: 1024px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #1d38a1;
+}
+.title__error{
+    font-size: 40px;
+    font-weight: bold;
+    margin: 2rem 0;
+}
+.message__content{
+    text-align: center;
+}
+.home-btn{
+    background-color: #1d38a1;
+    color: #fff;
+    border-radius: 30px;
+    border: none;
+    padding: 1rem;
+    transition-duration: 0.5s;
+}
+.home-btn:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+        -webkit-transform: scale(1.2); 
+        -moz-transform: scale(1.2); 
+        -o-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+}

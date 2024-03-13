@@ -1,0 +1,364 @@
+<div class="app" style="background-color: #F5F5F5;">
+    <header class="header">
+        <div class="grid">
+            <nav class="header__navbar">
+                <ul class="header__navbar-list-left">
+                    <li class="header__navbar-item">
+                        <a href="/" class="header__navbar-item-link">DANASA
+                        </a>
+                    </li>
+                    <div class="pentagon"></div>
+                </ul>
+
+                <ul class="header__navbar-list-right">
+                    <li class="header__navbar-item">
+                        <a href="/" class="header__navbar-item-link">Trang chủ</a>
+                    </li>
+                    <li class="header__navbar-item">
+                        <a href="/news" class="header__navbar-item-link">Tin tức</a>
+                    </li>
+                    <li class="header__navbar-item">
+                        <a href="/contact" class="header__navbar-item-link">Liên hệ</a>
+                    </li>
+                    <li class="header__navbar-item header__navbar-item-dropdown">
+                        <a href="/login" class="header__navbar-item-link link-name">{{infoLogin}}</a>
+                        <div class="menu-show-container" id="dropdown">
+                            <div class="user">
+                                <i class="fa-solid fa-circle-user"></i>
+                                <h3>{{isLoggedIn}}</h3>
+                            </div>
+                            <div class="button">
+                                <ul>
+                                    <li class="li-dropdown">
+                                        <i class="fa-solid fa-clock-rotate-left" style="color:var(--text-color)"></i>
+                                        <span>
+                                            <a class="itemm" href="/history-buy-ticket" >
+                                                Lịch sử đặt vé
+                                            </a>
+                                        </span>
+                                    </li>
+                                    <li class="li-dropdown">
+                                        <i class="fa-solid fa-user-large" style="color:var(--text-color)"></i>
+                                        <span><a href="/updateinfo" >
+                                                Thông tin cá nhân
+                                            </a></span>
+                                    </li>
+                                    <li class="li-dropdown">
+                                        <i class="fa-solid fa-user-pen" style="color:var(--text-color)"></i>
+                                        <span><a href="/change-password" >
+                                                Thay đổi mật khẩu
+                                            </a></span>
+                                    </li>
+                                    <li class="li-dropdown">
+                                        <i class="fa-solid fa-right-from-bracket" style="color:var(--text-color)"></i>
+                                        <span><a href="/login/logout" >
+                                                Đăng xuất
+                                            </a></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <script>
+        const dropdown = document.getElementById("dropdown");
+        const infoLogin = "{{infoLogin}}";
+        if (infoLogin === "Đăng nhập") {
+            dropdown.style.display = "none";
+        }
+    </script>
+
+    <div class="container__ticketConfirm">
+        <div class="grid">
+            <div class="container__content type-normal" style="-webkit-box-shadow: 0 0 0.2rem #c7c5c5;
+                box-shadow: 0 0 0.2rem #c7c5c5;">
+                <div class="container__content-nameStep">
+                    <h2>XÁC NHẬN LỘ TRÌNH</h2>
+                </div>
+                <div class="container__content-lineStep">
+                    <div class="steps-line">
+                        <div class="step-circle">
+                            <div class="step-circle-first">
+                                <div class="text">1</div>
+                                <div class="title-active">
+                                    <span id="step-1">
+                                        Chọn tuyến
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="steps-line">
+                        <div class="step-circle">
+                            <div class="step-circle-second" style="background: white;">
+                                <div class="text" style="color: #4b8efa;">2</div>
+                                <div class="title-active">
+                                    <span id="step-1">
+                                        Xác nhận lộ trình
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="steps-line">
+                        <div class="step-circle">
+                            <div class="step-circle-third" style="background-color: #eff1f2; border: none;">
+                                <div class="text" style="color: #637280;">3</div>
+                                <div class="title-active">
+                                    <span id="step-2">
+                                        Thông tin hành khách
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="steps-line">
+                        <div class="step-circle">
+                            <div class="step-circle-fourth" style="background-color: #eff1f2; border: none;">
+                                <div class="text" style="color: #637280;">4</div>
+                                <div class="title-active">
+                                    <span id="step-1">
+                                        Thanh toán
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="container__content-lineStraight">
+                    <div class="step-line step-line-first first-line"></div>
+                </div>
+
+                <div class="container__content-step-1">
+                    <div class="container__content-step-1-filter">
+                        <div class="custom-filter-container">
+                            <select class="filter-select typeCoach" name="" id="">
+                                <option value="0">Loại xe</option>
+                                {{!-- <option value="0">All</option> --}}
+                                {{#each types}}
+                                <option value="{{this.idType}}">{{this.typeName}}</option>
+                                {{/each}}
+                            </select>
+                            <select class="filter-select awhile-time" name="" id="" >
+                                <option value="0">Giờ</option>
+                                {{!-- <option value="0">All</option> --}}
+                                <option value="1">0h - 6h</option>
+                                <option value="2">6h - 12h</option>
+                                <option value="3">12h - 18h</option>
+                                <option value="4">18h - 24h</option>
+                            </select>
+                            <script>
+                                var typeCoach = document.querySelector('.typeCoach');
+                                var awhile__time = document.querySelector('.awhile-time');
+                                typeCoach.value = {{typeCBB}};
+                                awhile__time.value = {{awhileCBB}};
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="trip-info">
+                    Chọn giờ lên xe đi {{endProvince}} từ {{startProvince}} phù hợp </h2>
+            </div>
+            {{#each schedule}}
+            <div class="container__content-route-option">
+                <div class="header-time">
+                    {{this.start}}
+                    <i class="fa-solid fa-arrow-right"></i>
+                    {{this.end}}
+                    <div class="utilities">
+                        <i class="fa-sharp fa-solid fa-mug-hot"></i>
+                        <i class="fa-solid fa-bed"></i>
+                        <i class="fa-sharp fa-solid fa-wifi"></i>
+                    </div>
+                </div>
+
+                <div class="label">
+                    {{this.price}}đ
+                    <span class="dot"></span>
+                    {{this.typeName}}
+                    <span class="dot"></span>
+                    Còn {{this.haveSeat}} chỗ
+                </div>
+                <div class="route-line-container">
+                    <div class="route-line-list">
+                        <div class="route-line goFrom">
+                            <i class="fa-solid fa-circle-dot"></i>
+                            {{this.startStation}}
+                            <div class="route">Xe tuyến: {{this.distance}}km - {{this.hours}} tiếng</div>
+                        </div>
+
+                        <div class="route-line destination">
+                            <i class="fa-solid fa-location-dot"></i>
+                            {{this.endStation}}
+                        </div>
+                    </div>
+
+                    <div class="action-choose">
+                        <input type="radio" name="choose" value="{{this.idSchedule}}">
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    <div class="index">
+        <ul class="page-index inline">
+            <li class="page-item page-prev">
+                {{#if prev}}
+                <a href="/buy-ticket-step2?start={{startProvince}}&end={{endProvince}}&time={{timeQuery}}&type={{typeCBB}}&awhile={{awhileCBB}}&page={{prev}}" class="page-link arrow">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+                {{else}}
+                <a class="page-link arrow disabled" disabled>
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+                {{/if}}
+            </li>
+            <li class="page-item page-now">
+                <a class="page-link disable-page" disabled>{{current}}</a>
+            </li>
+            <li class="page-item page-next">
+                {{#if next}}
+                <a href="/buy-ticket-step2?start={{startProvince}}&end={{endProvince}}&time={{timeQuery}}&type={{typeCBB}}&awhile={{awhileCBB}}&page={{next}}" class="page-link arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                {{else}}
+                <a class="page-link arrow disabled" disabled>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                {{/if}}
+            </li>
+        </ul>
+    </div>
+    <footer class="footer">
+        <div class="grid">
+            <div class="grid__row-footer">
+                <div class="col grid__column-intro">
+                    <div class="col__column-inner">
+                        <img width="220" height="150" src="./img/footer_danasa.png"
+                            class="attachment-original size-original" alt="">
+                        <div class="icon-box-text last-reset">
+                            <p style="width: 60%; text-align-last: center;">Công ty cổ phần xe khách Danasa Bus
+                                Lines</p>
+                        </div>
+
+                        <div class="social-icons follow-icons">
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col grid__column-lienhe">
+                    <div class="col-inner">
+                        <h3 style="padding-right: -20px;width: 250px;">THÔNG TIN LIÊN HỆ</h3>
+                        <div class="icon-box icon-box-left text-left">
+                            <div class="icon-box-img" style="width: 100%">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <div class="icon-box-text last-reset">
+                                    <p style="width: 90%; ">54 Nguyễn Lương Bằng, Hòa Khánh Bắc,
+                                        Liên Chiểu, Đà Nẵng </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="icon-box icon-box-left text-left">
+                            <div class="icon-box-img" style="width: 70%">
+                                <i class="fa-solid fa-phone" style="font-size: 17px;"></i>
+                                <div class="icon-box-text last-reset">
+                                    <p>076 922 0162</p>
+                                </div>
+                            </div>
+
+                            <div class="icon-box icon-box-left text-left">
+                                <div class="icon-box-img" style="width: 70%">
+                                    <i class="fa-solid fa-envelopes-bulk" style="font-size: 17px;"></i>
+                                    <div class="icon-box-text last-reset">
+                                        <p>danasacoach79@gmail.com</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col grid__column-hinhanh">
+                    <div class="col-inner">
+                        <h3>HÌNH ẢNH</h3>
+                        <div class="grid__row-3-col-3">
+                            <div class="galary-col col">
+                                <div class="container">
+                                    <img src="./img/xe_do.jpg" alt="Xe đỏ">
+                                    <img src="./img/xe_xanh2.jpg" alt="Xe đỏ">
+                                </div>
+                                <div class="container">
+                                    <img src="./img/xe_xanh1.jpg" alt="Xe đỏ">
+                                    <img src="./img/xe_do2.jpg" alt="Xe đỏ">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col grid__column-dangky">
+                    <div class="col-inner">
+                        <h3 style="width: 250px;">HỢP TÁC VÀ LIÊN KẾT</h3>
+                        <p style="font-size: 1.2rem;">Quy chế hoạt động Sàn GDTMĐT</p>
+                        <p style="font-size: 1.2rem;">Bến xe Trung tâm Đà Nẵng</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="line-straight-footer"></div>
+    </footer>
+</div>
+<a class="changeFilter"></a>
+<script>
+    var typeCoach = document.querySelector('.typeCoach');
+    var awhile__time = document.querySelector('.awhile-time');
+    var a = document.querySelector('.changeFilter');
+    var button = document.querySelectorAll('.action-choose');
+    //const infoLogin = {{infoLogin}};
+    for( var btn of button){
+        btn.onclick = function(e){
+            if(infoLogin === "Đăng nhập") {
+                console.log("hihi")
+                a.href = "/login";
+                a.click();
+            }
+            else {
+                console.log("hahaha");
+                a.href = `/buy-ticket-step3/${e.target.value}`;
+                a.click();
+            }
+        }
+    }
+    awhile__time.onchange = function(){
+        a.href = `./buy-ticket-step2?start={{startProvince}}&end={{endProvince}}&time={{timeQuery}}&type=${typeCoach.value}&awhile=${awhile__time.value}&page=1`;
+        a.click();
+    };
+    typeCoach.onchange = function(){
+        a.href = `./buy-ticket-step2?start={{startProvince}}&end={{endProvince}}&time={{timeQuery}}&type=${typeCoach.value}&awhile=${awhile__time.value}&page=1`;
+        a.click();
+    };
+
+    
+</script>
+
+<script>
+    const linkName = document.querySelector('.link-name');
+    if(linkName.innerHTML !== "Đăng nhập") {
+        linkName.href = "#";
+    }
+</script>
+

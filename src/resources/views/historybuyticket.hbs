@@ -1,0 +1,451 @@
+<div class="app" style="background-color: #F5F5F5;">
+    <header class="header">
+        <div class="grid">
+            <nav class="header__navbar">
+                <ul class="header__navbar-list-left">
+                    <li class="header__navbar-item">
+                        <a href="/" class="header__navbar-item-link">DANASA
+                        </a>
+                    </li>
+                    <div class="pentagon"></div>
+                </ul>
+
+                <ul class="header__navbar-list-right">
+                    <li class="header__navbar-item">
+                        <a href="/" class="header__navbar-item-link">Trang chủ</a>
+                    </li>
+                    <li class="header__navbar-item">
+                        <a href="/news" class="header__navbar-item-link">Tin tức</a>
+                    </li>
+                    <li class="header__navbar-item">
+                        <a href="/contact" class="header__navbar-item-link">Liên hệ</a>
+                    </li>
+                    <li class="header__navbar-item header__navbar-item-dropdown">
+                        <a href="/login" class="header__navbar-item-link link-name">{{infoLogin}}</a>
+                        <div class="menu-show-container" id="dropdown">
+                            <div class="user">
+                                <i class="fa-solid fa-circle-user"></i>
+                                <h3>{{isLoggedIn}}</h3>
+                            </div>
+                            <div class="button">
+                                <ul>
+                                    <li class="li-dropdown">
+                                        <i class="fa-solid fa-clock-rotate-left" style="color:var(--text-color)"></i>
+                                        <span>
+                                            <a class="itemm" href="/history-buy-ticket">
+                                                Lịch sử đặt vé
+                                            </a>
+                                        </span>
+                                    </li>
+                                    <li class="li-dropdown">
+                                        <i class="fa-solid fa-user-large" style="color:var(--text-color)"></i>
+                                        <span><a href="/updateinfo">
+                                                Thông tin cá nhân
+                                            </a></span>
+                                    </li>
+                                    <li class="li-dropdown">
+                                        <i class="fa-solid fa-user-pen" style="color:var(--text-color)"></i>
+                                        <span><a href="/change-password">
+                                                Thay đổi mật khẩu
+                                            </a></span>
+                                    </li>
+                                    <li class="li-dropdown">
+                                        <i class="fa-solid fa-right-from-bracket" style="color:var(--text-color)"></i>
+                                        <span><a href="/login/logout">
+                                                Đăng xuất
+                                            </a></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <script>
+        const dropdown = document.getElementById("dropdown");
+        const infoLogin = "{{infoLogin}}";
+        if (infoLogin === "Đăng nhập") {
+            dropdown.style.display = "none";
+        }
+    </script>
+
+    <div class="container__ticketseller">
+        <div class="grid">
+            <div class="contain__ticketseller-banner" style="width: 1120px;">
+                <img src="./img/banner.png" alt="Banner" width="1120px" height="456px" />
+            </div>
+            <div class="contain__ticketseller-head">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                <h2>
+                    <a href="/history-buy-ticket" style="text-decoration: none;color: #4b8efa;">LỊCH SỬ ĐẶT VÉ</a>
+                </h2>
+                <div class="line-straight"> </div>
+            </div>
+            <div class="container__content-choose">
+                <div class="container__content-choose-filter">
+                    <div class="custom-choose-filter-container">
+                        <select class="filter-select" name="" id="searchByStartProvince" fdprocessedid="jxlvcl"
+                            onchange="loadDataStartProvince()">
+                            <option value="0" selected="selected">Tỉnh đi</option>
+                            {{#each listStartProvince}}
+                            <option value="{{id_start}}">{{startProvinceName}}</option>
+                            {{/each}}
+                        </select>
+
+                        <select class="filter-select" name="" id="searchByEndProvince" fdprocessedid="jxlvcl"
+                            onchange="loadDataEndProvince()">
+                            <option value="0" selected="selected">Tỉnh đến</option>
+                            {{#each listEndProvince}}
+                            <option value="{{id_end}}">{{endProvinceName}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                    <h1 style="padding: 2rem 40rem; text-align: center;  color: #f21036;" id="message">{{message}}</h1>
+                    <div class="list-history" id="dataList">
+                        {{#each historyList }}
+                        <form class="container__content-route-history detailHistory" data-id="{{id}}">
+                            <div class="header-time">
+                            <i class="fa-solid {{icon}}" style="color: #147c2b;" title="Vé đã sử dụng"></i>
+                                {{startTime}}
+                                <i class="fa-solid fa-arrow-right"></i>
+                                {{endTime}}
+                                <span class="date-go">
+                                    {{startDate}}
+                                </span>
+                                <div class="utilities">
+                                    <i class="fa-sharp fa-solid fa-mug-hot"></i>
+                                    <i class="fa-solid fa-bed"></i>
+                                    <i class="fa-sharp fa-solid fa-wifi"></i>
+                                </div>
+                            </div>
+                            <div class="route-line-container">
+                                <div class="route-line-list">
+                                    <div class="route-line goFrom">
+                                        <i class="fa-solid fa-circle-dot"></i>
+                                        {{startStation}}
+                                        <div class="route">Xe tuyến: {{distance}} km - {{hour}} tiếng</div>
+                                    </div>
+
+                                    <div class="route-line destination">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        {{endStation}}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="info-ticket">
+                                <div class="info-slot" style="color: #676161;">
+                                    Số ghế: <span style="color: black; font-weight: 600;">{{nameSeat}}</span>
+                                </div>
+
+                                <div class="price-ticket">
+                                    <span class="title-money">TỔNG TIỀN</span>
+                                    <span class="price"
+                                        style="color: #4B8EFA; font-weight: 600; padding-left: 10px;">{{Totalprice}}đ</span>
+                                </div>
+                            </div>
+
+
+                        </form>
+
+                        <div id="{{id}}" class="modal_history">
+                            <span id="clodeIcon" class="close"
+                                onclick="document.getElementById({{id}}).style.display='none'"
+                                title="Close Modal">&times;</span>
+                            <form class="modal-content_history">
+                                <div class="container-modal_history">
+                                    <h1> THÔNG TIN ĐẶT VÉ</h1>
+                                    {{!-- <p class="sub-table-title font-15">Thông tin hành khách</p> --}}
+                                    <div class="sub-table-info-customer font-14">
+                                        <div class="content_history-detail">
+                                            <div class="form--group width__item-detail-history">
+                                                <label for="name" class="form--label">Họ tên:</label>
+                                                <input readonly class="form--control" style="font-style: initial;"
+                                                    type="text" name="name" id="name" value="{{name}}"></input>
+                                            </div>
+                                            <div class="form--group width__item-detail-history">
+                                                <label for="SDT" class="form--label">Số điện thoại:</label>
+                                                <input readonly class="form--control" style="font-style: initial;"
+                                                    type="text" name="SDT" id="SDT" value="{{phonenumber}}"></input>
+                                            </div>
+                                            <div class="form--group width__item-detail-history">
+                                                <label for="email" class="form--label">Email:</label>
+                                                <input readonly class="form--control" style="font-style: initial;"
+                                                    type="text" name="email" id="email" value="{{email}}"></input>
+                                            </div>
+
+                                            <div class="form--group width__item-detail-history">
+                                                <div class="line_history_detail"></div>
+                                            </div>
+                                            <div class="form--group width__item-detail-history">
+                                                <label for="route" class="form--label">Chuyến đi:</label>
+                                                <input readonly class="form--control" style="font-style: initial;"
+                                                    type="text" name="route" id="route"
+                                                    value="{{startProvince}} - {{endProvince}}"></input>
+                                            </div>
+                                            <div class="form--group width__item-detail-history">
+                                                <label for="licensePlates" class="form--label">Biển số xe:</label>
+                                                <input readonly class="form--control" style="font-style: initial;"
+                                                    type="text" name="licensePlates" id="licensePlates"
+                                                    value="{{licensePlate}}"></input>
+                                            </div>
+                                            <div class="form--group width__item-detail-history">
+                                                <label for="timeStart" class="form--label">Thời gian khởi
+                                                    hành:</label>
+                                                <input readonly class="form--control" style="font-style: initial;"
+                                                    type="text" name="timeStart" id="email"
+                                                    value="{{startTime}} {{startDate}}"></input>
+                                            </div>
+                                            <div class="form--group width__item-detail-history">
+                                                <label for="priceTicket" class="form--label">Số ghế:</label>
+                                                <input readonly class="form--control" style="font-style: initial;"
+                                                    type="text" name="priceTicket" id="priceTicket"
+                                                    value="{{nameSeat}}"></input>
+                                            </div>
+
+                                            <div class="form--group width__item-detail-history">
+                                                <label for="totalPrice" class="form--label">Tổng cộng:</label>
+                                                <input readonly class="form--control" style="font-style: initial;"
+                                                    type="text" name="totalPrice" id="totalPrice"
+                                                    value="{{Totalprice}} VNĐ"></input>
+                                            </div>
+                                            <div class="form--group width__item-detail-history">
+                                                <label for="status" class="form--label">Tình trạng:</label>
+                                                <input readonly class="form--control" style="font-style: initial;"
+                                                    type="text" name="status" id="status" value="{{status}}"></input>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix_history">
+                                        <button type="button" class="okbtn" id="okBtn" onclick="okBtn()">OK</button>
+                                    </div>
+                                    <div class="used {{show}}">
+                                        <div class="used__rectangle">
+                                            <div class="used__rectangle--smaller">
+                                                <p class="used_text">VÉ ĐÃ SỬ DỤNG</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        {{/each}}
+
+                        <div class="index">
+                            <ul class="page-index inline">
+                                <li class="page-item">
+                                    {{#if prev}}
+                                    <a href="/history-buy-ticket?start={{id_Start}}&end={{id_End}}&page={{prev}}"
+                                        class="page-link arrow">
+                                        <i class="fa-solid fa-arrow-left"></i>
+                                    </a>
+                                    {{else}}
+                                    <a class="page-link arrow disabled" disabled>
+                                        <i class="fa-solid fa-arrow-left"></i>
+                                    </a>
+                                    {{/if}}
+                                </li>
+                                <li class="page-item page-now">
+                                    <a class="page-link disable-page">{{current}}</a>
+                                </li>
+                                <li class="page-item">
+                                    {{#if next}}
+                                    <a href="/history-buy-ticket?start={{id_Start}}&end={{id_End}}&page={{next}}"
+                                        class="page-link arrow">
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+                                    {{else}}
+                                    <a class="page-link arrow disabled" disabled>
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+                                    {{/if}}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="grid">
+            <div class="grid__row-footer">
+                <div class="col grid__column-intro">
+                    <div class="col__column-inner">
+                        <img width="220" height="150" src="./img/footer_danasa.png"
+                            class="attachment-original size-original" alt="">
+                        <div class="icon-box-text last-reset">
+                            <p style="width: 60%; text-align-last: center;">Công ty cổ phần xe khách Danasa Bus
+                                Lines</p>
+                        </div>
+
+                        <div class="social-icons follow-icons">
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col grid__column-lienhe">
+                    <div class="col-inner">
+                        <h3 style="padding-right: -20px;width: 250px;">THÔNG TIN LIÊN HỆ</h3>
+                        <div class="icon-box icon-box-left text-left">
+                            <div class="icon-box-img" style="width: 100%">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <div class="icon-box-text last-reset">
+                                    <p style="width: 90%; ">54 Nguyễn Lương Bằng, Hòa Khánh Bắc,
+                                        Liên Chiểu, Đà Nẵng </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="icon-box icon-box-left text-left">
+                            <div class="icon-box-img" style="width: 70%">
+                                <i class="fa-solid fa-phone" style="font-size: 17px;"></i>
+                                <div class="icon-box-text last-reset">
+                                    <p>076 922 0162</p>
+                                </div>
+                            </div>
+
+                            <div class="icon-box icon-box-left text-left">
+                                <div class="icon-box-img" style="width: 70%">
+                                    <i class="fa-solid fa-envelopes-bulk" style="font-size: 17px;"></i>
+                                    <div class="icon-box-text last-reset">
+                                        <p>danasacoach79@gmail.com</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col grid__column-hinhanh">
+                    <div class="col-inner">
+                        <h3>HÌNH ẢNH</h3>
+                        <div class="grid__row-3-col-3">
+                            <div class="galary-col col">
+                                <div class="container">
+                                    <img src="./img/xe_do.jpg" alt="Xe đỏ">
+                                    <img src="./img/xe_xanh2.jpg" alt="Xe đỏ">
+                                </div>
+                                <div class="container">
+                                    <img src="./img/xe_xanh1.jpg" alt="Xe đỏ">
+                                    <img src="./img/xe_do2.jpg" alt="Xe đỏ">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col grid__column-dangky">
+                    <div class="col-inner">
+                        <h3 style="width: 250px;">HỢP TÁC VÀ LIÊN KẾT</h3>
+                        <p style="font-size: 1.2rem;">Quy chế hoạt động Sàn GDTMĐT</p>
+                        <p style="font-size: 1.2rem;">Bến xe Trung tâm Đà Nẵng</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="line-straight-footer"></div>
+    </footer>
+</div>
+
+
+
+
+<script>
+    var detail = document.querySelectorAll('.container__content-route-history');
+    detail.forEach(function (element) {
+        element.onclick = function (event) {
+            event.preventDefault();
+            var popup = this.getAttribute('data-id');
+            document.getElementById(popup).style.display = 'block';
+
+            var closeBtn = document.querySelectorAll('.okbtn');
+            closeBtn.forEach(function (e) {
+                e.onclick = function () {
+                    document.getElementById(popup).classList.add("fade-out");
+                    setTimeout(function () {
+                        document.getElementById(popup).style.display = "none";
+                        document.getElementById(popup).classList.remove("fade-out");
+                    }, 500);
+                };
+            })
+        }
+    });
+
+</script>
+
+
+<a href="" id="results"></a>
+
+
+<script>
+
+
+    document.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function (event) {
+            if (!link.href.includes('page')) {
+                resetPageState();
+            }
+        });
+    });
+
+    document.getElementById('searchByStartProvince').addEventListener('change', function () {
+        localStorage.setItem('selectedStartProvince', this.value);
+
+        localStorage.setItem('selectedEndProvince', document.getElementById('searchByEndProvince').value);
+    });
+
+    document.getElementById('searchByEndProvince').addEventListener('change', function () {
+        localStorage.setItem('selectedEndProvince', this.value);
+
+        localStorage.setItem('selectedStartProvince', document.getElementById('searchByStartProvince').value);
+    });
+
+    var selectedStartProvince = localStorage.getItem('selectedStartProvince');
+    var selectedEndProvince = localStorage.getItem('selectedEndProvince');
+
+    if (selectedStartProvince && selectedStartProvince !== selectedEndProvince) {
+        document.querySelector('#searchByStartProvince [value="' + selectedStartProvince + '"]').selected = true;
+    }
+
+    if (selectedEndProvince && selectedStartProvince !== selectedEndProvince) {
+        document.querySelector('#searchByEndProvince [value="' + selectedEndProvince + '"]').selected = true;
+    }
+
+    function resetPageState() {
+        localStorage.clear();
+        sessionStorage.clear();
+    }
+
+</script>
+
+<script>
+    var link = document.querySelector('#results');
+    var start = document.querySelector('#searchByStartProvince');
+    var end = document.querySelector('#searchByEndProvince');
+    function loadDataStartProvince() {
+        link.href = `history-buy-ticket?start=${start.value}&end=${end.value}`;
+        link.click();
+    }
+
+    function loadDataEndProvince() {
+        link.href = `history-buy-ticket?start=${start.value}&end=${end.value}`;
+        link.click();
+    }
+</script>
+
+
+<script>
+    const linkName = document.querySelector('.link-name');
+    if (linkName.innerHTML !== "Đăng nhập") {
+        linkName.href = "#";
+    }
+</script>

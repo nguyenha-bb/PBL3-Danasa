@@ -1,0 +1,41 @@
+.container-create__route .width-item-80 input {
+    background-color: #DDE4FF;
+    width: 80%;
+    border: none;
+    font-size: 14px;
+    outline: none;
+}
+
+select.form-control-route {
+    width: 80%;
+    background: #dde4ff;
+    border: none;
+    font-size: 1.4rem;
+}
+
+.form-group--parent {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.route-item-input {
+    width: 47%;
+}
+
+.route-item-input input {
+    background-color: #DDE4FF;
+    border: none;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-control-route {
+    height: 4rem;
+    border-radius: 15px;
+    padding-left: 2rem;
+}
+
+.container-create__route .width-item-80 {
+    margin-bottom: 1.7rem;
+}

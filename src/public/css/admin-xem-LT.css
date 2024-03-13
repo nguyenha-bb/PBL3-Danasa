@@ -1,0 +1,215 @@
+.container-admin {
+    height: 68rem;
+    background-color: #F5F5F5;
+    padding: 3rem 5rem;
+    width: 70%;
+    margin-right: 5rem rem;
+    margin-left: 5rem;
+}
+
+.container-admin .title-admin {
+    display: flex;
+}
+
+.container-admin .title-content {
+    color: #1D38A1;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-left: 1.4rem;
+}
+
+.eye-icon {
+    font-size: 1.5rem;
+    color: #1D38A1;
+}
+
+.container-admin .title-line {
+    width: 18rem;
+    height: 0.2rem;
+    background-color: #1D38A1;
+    position: relative;
+    top: 1rem;
+}
+
+.container-cbb select {
+    background-color: white;
+}
+
+.container-admin .container-cbb {
+    display: flex;
+    margin-top: 3.5rem;
+}
+
+.container-admin .container-cbb .cbb-admin {
+    width: 16rem;
+    height: 4.5rem;
+    border-radius: 2rem;
+    font-size: 1.4rem;
+    padding: 0 2rem;
+    border-color: #F5F5F5;
+}
+
+.cbb-admin+.cbb-admin {
+    margin-left: 4rem;
+}
+
+.container-table {
+    margin-top: 3rem;
+}
+
+.table-head__schedule {
+    display: flex;
+}
+
+.table-head__schedule .tbhead-item {
+    background-color: #DDE4FF;
+    height: 5rem;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.5rem;
+    font-weight: 600;
+}
+
+.tbhead-item+.tbhead-item {
+    margin-left: 2rem;
+}
+
+.tbhead-start,
+.tbhead-end {
+    width: 24rem;
+}
+
+.tbhead-time,
+.tbhead-price,
+.tbhead-licenseplate {
+    width: 15rem;
+}
+
+.table-head__schedule .tbhead-delete,
+.table-head__schedule .tbhead-edit {
+    width: 2rem;
+    background-color: #F5F5F5;
+}
+
+.table-body__schedule {
+    background-color: #fff;
+    display: flex;
+    height: 5.5rem;
+    margin-top: 1.5rem;
+}
+
+.section-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.section-item+.section-item {
+    margin-left: 2rem;
+}
+
+.section-item.start,
+.section-item.end {
+    width: 24rem;
+}
+
+.section-item.time {
+    width: 15rem;
+}
+
+.section-item.price {
+    width: 15rem;
+}
+
+.section-item.license-plate {
+    width: 14rem;
+}
+
+.icon-delete,
+.icon-edit {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.section-subitem {
+    text-align: center;
+}
+
+.icon-delete i {
+    font-size: 2rem;
+    color: #FF0000;
+}
+
+.icon-edit i {
+    font-size: 2rem;
+    color: #147C2B;
+}
+
+.section-item.icon-edit {
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.section-subitem.italic {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-top: 0.3rem;
+}
+
+.index {
+    margin: 5rem 0;
+}
+
+.page-index {
+    justify-content: center;
+}
+
+.page-index .page-item {
+    list-style-type: none;
+    margin: 0 0.5rem;
+    border: 0.5px solid rgba(52, 98, 173, 0.5);
+}
+
+.page-item a {
+    font-size: 24px;
+    margin: 0.7rem;
+    line-height: 4rem;
+}
+
+.page-index .page-link {
+    text-decoration: none;
+    color: #000;
+}
+
+.page-index .arrow i {
+    font-size: 16px;
+    color: #000;
+}
+
+.inline {
+    display: flex;
+    flex-direction: row;
+}
+
+.page-now {
+    background-color: #96BCFA;
+}
+
+.page-now .page-link {
+    color: #fff;
+}
+
+.disable-page {
+    cursor: default;
+}
+
+.limited-height {
+    max-height: 150px;
+    overflow-y: auto;
+}

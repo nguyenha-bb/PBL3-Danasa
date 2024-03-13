@@ -1,0 +1,72 @@
+<header class="header">
+  <div class="grid">
+    <nav class="header__navbar">
+      <ul class="header__navbar-list-left">
+        <li class="header__navbar-item">
+          <a href="./" class="header__navbar-item-link">DANASA
+          </a>
+        </li>
+        <div class="pentagon"></div>
+      </ul>
+
+      <ul class="header__navbar-list-right">
+        <li class="header__navbar-item">
+          <a href="/" class="header__navbar-item-link">Trang chủ</a>
+        </li>
+        <li class="header__navbar-item">
+          <a href="/news" class="header__navbar-item-link">Tin tức</a>
+        </li>
+        <li class="header__navbar-item">
+          <a href="/contact" class="header__navbar-item-link">Liên hệ</a>
+        </li>
+        <li class="header__navbar-item header__navbar-item-dropdown"  >
+          <a href="/login" class="header__navbar-item-link">{{infoLogin}}</a>
+          <div class="menu-show-container" id="dropdown">
+            <div class="user">
+              <i class="fa-solid fa-circle-user"></i>
+              <h3>{{isLoggedIn}}</h3>
+            </div>
+            <div class="button">
+              <ul>
+                <li class="li-dropdown">
+                  <i class="fa-solid fa-clock-rotate-left"></i>
+                  <span>
+                    <a href="/history-buy-ticket" style="text-decoration: none; color: black" >
+                      Lịch sử đặt vé
+                    </a>
+                  </span>
+                </li>
+                <li class="li-dropdown">
+                  <i class="fa-solid fa-user-large"></i>
+                  <span><a href="/updateinfo" style="text-decoration: none; color: black" >
+                      Thông tin cá nhân
+                    </a></span>
+                </li>
+                <li class="li-dropdown">
+                  <i class="fa-solid fa-user-pen"></i>
+                  <span><a href="/change-password" style="text-decoration: none; color: black" >
+                      Thay đổi mật khẩu
+                    </a></span>
+                </li>
+                <li class="li-dropdown">
+                  <i class="fa-solid fa-right-from-bracket"></i>
+                  <span><a href="/login/logout" style="text-decoration: none; color: black" >
+                      Đăng xuất
+                    </a></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+    const dropdown = document.getElementById("dropdown");
+    const infoLogin = "{{infoLogin}}";
+    if (infoLogin === "Đăng nhập") {
+      dropdown.style.display = "none";
+    }
+</script>

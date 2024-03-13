@@ -1,0 +1,512 @@
+<header class="header-admin">
+    <div class="grid">
+        <nav class="header__navbar-admin">
+            <div class="header__navbar-left-admin">
+                <div class="header__navbar-list-left-admin">
+                    <div class="pentagon-admin"></div>
+                    <div class="header__navbar-item-admin">
+                        <a href="/admin/statistics" class="header__navbar-item-link-admin">DANASA</a>
+                    </div>
+                </div>
+            </div>
+            <div class="header__navbar-right-admin">
+                <div class="search-field">
+                    <i class="fa-solid fa-clock" style="font-size: 2rem; padding-right: 1rem;"></i>
+                    <span id="date"></span>
+                    <span id="clock"></span>
+                </div>
+
+                <div class="header__navbar-right-2">
+                    <div class="nav-item">
+                        <div class="dropdown">
+                            <button type="button"
+                                class="nav-link count-indicator dropdown-toggle btn btn-primary-notifi"
+                                fdprocessedid="6335cp" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa-solid fa-hands-clapping" style="font-size: 2.2rem; color: #2a4e8a; margin-right: -0.8rem;"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    {{!-- <div class="nav-item">
+                        <div class="dropdown">
+                            <button type="button" class="nav-link count-indicator dropdown-toggle btn btn-primary-mess"
+                                fdprocessedid="6335cp" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa-solid fa-envelope"></i>
+                                <span class="count-symbol bg-warning" style="font-size: 1.25rem;"></span>
+                            </button>
+                        </div>
+                    </div> --}}
+
+                    <div class="nav-item nav-profile">
+                        <div class="dropdown">
+                            <button type="button" class="nav-link dropdown-toggle btn btn-primary" style="position: relative;
+                                padding: 3rem 0;" aria-haspopup="true" aria-expanded="false">
+                                <div class="nav-profile-text">
+                                    <p class="mb-1 text-black">Xin chào Admin!</p>
+                                </div>
+                            </button>
+                            <button class="logout-admin">
+                                <a href="/login/logout" class="nav-profile-img">
+                                    <i class="fa-solid fa-right-from-bracket"
+                                        style="font-size: 2rem; color: #2a4e8a;"></i>
+                                    <span class="availability-status online"></span>
+                                </a>
+                            </button>
+                            <div class="show-drop-down"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+</header>
+<div class="container-page-admin-wrap">
+    <div class="grid" style="display: flex;">
+        <div class="sidebar">
+            <ul>
+                <div class="nav-link">
+                    <li class="nav-link-parent">
+                        <div class="item">
+                            <i class="icon-left fa-solid fa-chart-line"></i>
+                            <a href="#">Thống kê</a>
+                        </div>
+                        <i class="dropdown fa-solid fa-caret-down" href=""></i>
+                    </li>
+
+                    <ul class="nav-link-show ">
+                        <li class="nav-link-show-item">
+                            <i class="a fa-solid "></i>
+                            <a class="content" href="/admin/statistics">Doanh thu</a>
+                        </li>
+                        <li class="nav-link-show-item">
+                            <i class="fa-solid "></i>
+                            <a class="content" href="/admin/sales">Doanh số</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-link">
+                    <li class="nav-link-parent">
+                        <div class="item">
+                            <i class="icon-left fa-solid fa-newspaper"></i>
+                            <a href="#">Tin tức </a>
+                        </div>
+                        <i class="dropdown fa-solid fa-caret-down"></i>
+                    </li>
+                    <ul class="nav-link-show">
+                        <li class="nav-link-show-item">
+                            <i class="fa-solid "></i>
+                            <a class="content" href="/admin/list-news">Xem tin tức</a>
+                        </li>
+                        <li class="nav-link-show-item">
+                            <i class="fa-solid "></i>
+                            <a class="content" href="/admin/create-news">Tạo tin tức</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-link">
+                    <li class="nav-link-parent">
+                        <div class="item">
+                            <i class="icon-left fa-sharp fa-solid fa-user" style="font-size: 1.5rem;"></i>
+                            <a href="#">Tài khoản</a>
+                        </div>
+                        <i class="dropdown fa-solid fa-caret-down"></i>
+                    </li>
+
+                    <ul class="nav-link-show">
+                        <li class="nav-link-show-item">
+                            <i class="fa-solid "></i>
+                            <a class="content" href="/admin/list-cus">Xem tài khoản</a>
+                        </li>
+                        <li class="nav-link-show-item">
+                            <i class="fa-solid "></i>
+                            <a class="content" href="/admin/delete-cus">Xóa tài khoản</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-link">
+                    <li class="nav-link-parent">
+                        <div class="item">
+                            <i class="icon-left fa-regular fa-calendar-days" style="font-size: 1.5rem;"></i>
+                            <a href="#">Lịch trình</a>
+                        </div>
+                        <i class="dropdown fa-solid fa-caret-down"></i>
+                    </li>
+
+                    <ul class="nav-link-show">
+                        <li class="nav-link-show-item">
+                            <i class="fa-solid "></i>
+                            <a class="content" href="/admin/list-schedule">Xem lịch trình</a>
+                        </li>
+                        <li class="nav-link-show-item">
+                            <i class="fa-solid "></i>
+                            <a class="content" href="/admin/create-schedule">Tạo lịch trình</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav-link">
+                    <li class="nav-link-parent">
+                        <div class="item">
+                            <i class="icon-left fa-solid fa-bus-simple"></i>
+                            <a href="#">Xe khách</a>
+                        </div>
+                        <i class="dropdown fa-solid fa-caret-down" href=""></i>
+                    </li>
+
+                    <ul class="nav-link-show ">
+                        <li class="nav-link-show-item">
+                            <i class="a fa-solid "></i>
+                            <a class="content" href="/admin/list-coach">Xem xe khách</a>
+                        </li>
+                        <li class="nav-link-show-item">
+                            <i class="fa-solid "></i>
+                            <a class="content" href="/admin/create-coach">Thêm xe khách</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav-link">
+                    <li class="nav-link-parent">
+                        <div class="item">
+                            <i class="icon-left fa-solid fa-road" style="padding-right: 1.5rem;"></i>
+                            <a href="#">Tuyến xe</a>
+                        </div>
+                        <i class="dropdown fa-solid fa-caret-down" href=""></i>
+                    </li>
+
+                    <ul class="nav-link-show ">
+                        <li class="nav-link-show-item">
+                            <i class="a fa-solid "></i>
+                            <a class="content" href="/admin/list-route">Xem tuyến xe</a>
+                        </li>
+                        <li class="nav-link-show-item">
+                            <i class="fa-solid "></i>
+                            <a class="content" href="/admin/create-route">Thêm tuyến xe</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-link">
+                    <li class="nav-link-parent">
+                        <div class="item">
+                            <i class="icon-left fa-solid fa-archway"></i>
+                            <a href="#">Bến xe</a>
+                        </div>
+                        <i class="dropdown fa-solid fa-caret-down" href=""></i>
+                    </li>
+
+                    <ul class="nav-link-show ">
+                        <li class="nav-link-show-item">
+                            <i class="a fa-solid "></i>
+                            <a class="content" href="/admin/list-station">Xem bến xe</a>
+                        </li>
+                        <li class="nav-link-show-item">
+                            <i class="fa-solid "></i>
+                            <a class="content" href="/admin/create-station">Thêm bến xe</a>
+                        </li>
+                    </ul>
+                </div>
+            </ul>
+        </div>
+
+        <div class="container-content">
+            <div class="content-main" style="padding: 3rem;">
+                <div class="title">
+                    <div class="title-content">
+                        <i class="fa-solid fa-trash"></i>
+                        <h2>XÓA TÀI KHOẢN</h2>
+                    </div>
+                    <div class="line-straight-xoaTK"></div>
+                </div>
+
+                <div class="content-infor-customer">
+                    <form method="POST" action="" class="form-delete-acc" id="form-delete__account">
+                        <div class="content-row-1">
+                            <div class="form-group content-left">
+                                <p>Nhập SĐT <span class="asterisk">*</span>:</p>
+                                <input id="phonenumber" name="phonenumber"  type="tel"
+                                    class="form-control input-phonenumber" value="{{phonenumber}}">
+                                {{!-- <span class="form-message"></span> --}}
+
+                                
+                            </div>
+                            <button type="button" name="but-search__phone-number" class="but-search__phone-number  but">Tìm kiếm
+                                </button>
+                            {{!-- <div class="content-right">
+                                <p>Username *</p>
+                                <input id="text" name="username" rules="required" type="text" class="form-control"
+                                    placeholder="NVanA" disabled>
+
+                            </div> --}}
+                            
+                            
+                        </div>
+
+                        {{!-- <div class="content-row"> --}}
+                            <div class="message-error" style="font-size: 1.4rem; color: red; min-height: 1.6rem;">{{message}}</div>
+                        {{!-- </div> --}}
+
+                        <div class="content-row">
+                            <div class="content-text">
+                                <p>Username </p>
+                                <input id="text" name="username" rules="required" type="text" class="form-control" value="{{username}}"
+                                     disabled>
+                            </div>
+                        </div>
+
+                        <div class="content-row">
+                            <div class="content-text">
+                                <p>Họ và tên hành khách </p>
+                                <input id="text" name="name" rules="required" type="text" class="form-control" value="{{name}}"
+                                     disabled>
+                            </div>
+                        </div>
+
+                        <div class="content-row">
+                            <div class="content-text">
+                                <p>Số điện thoại </p>
+                                <input id="phonenumberaccount" name="phonenumberaccount" rules="required" type="phonenumber" value="{{phonenumber}}"
+                                    class="form-control"  disabled>
+                            </div>
+                        </div>
+
+                        <div class="content-row">
+                            <div class="content-text">
+                                <p>Email </p>
+                                <input id="email" name="email" rules="required" type="email" class="form-control" value="{{email}}"
+                                     disabled>
+                            </div>
+                        </div>
+
+                        {{!-- <div class="content-row-2">
+                            <div class="content-row-2-left">
+                                <p>Tỉnh/TP *</p>
+                                <select id="province" name="province" rules="required" class="form-control">
+                                    <option value="">Chọn Tỉnh/TP</option>
+                                    <option value="1">Hà Nội</option>
+                                    <option value="2">Hải Phòng</option>
+                                    <option value="3">Đà Nẵng</option>
+                                    <option value="4">TP. HCM</option>
+                                </select>
+                            </div>
+
+                            <div class="content-row-2-right" style=" margin-right: 15rem;">
+                                <p>Quận/Huyện *</p>
+                                <select id="district" name="district" rules="required" class="form-control">
+                                    <option value="">Chọn Quận/Huyện</option>
+                                    <option value="1">Hải Châu</option>
+                                    <option value="2">Hòa Khánh</option>
+                                    <option value="3">Cẩm Lệ</option>
+                                </select>
+                            </div>
+                        </div> --}}
+
+
+                        <div class="content-row" style="display:flex; justify-content: flex-end;">
+                            {{!-- <div> --}}
+                                <button class="but-delete-acc">Remove
+                                    <span>
+                                        <i class="fa-solid fa-x"
+                                            style="font-size: 1.4rem; font-weight: bolder; padding-left: .5rem;"></i>
+                                    </span>
+                                </button>
+                            {{!-- </div> --}}
+                        </div>
+                    </form>
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{#if failure}}
+<div id="toast">
+    <div class="toast toast--error">
+        <div class="toast__icon">
+            <i class="fas fa-exclamation-circle"></i>
+        </div>
+        <div class="toast__body">
+            <h3 class="toast__title">Failed</h3>
+            <p class="toast__msg">{{failure}}</p>
+        </div>
+        <div class="toast__close">
+            <i class="fas fa-times"></i>
+        </div>
+    </div>
+</div>
+{{/if}}
+
+{{!-- MODAL DELETE NEWS --}}
+<div id="id01" class="modal">
+    <span id="clodeIcon" class="close" onclick="document.getElementById('id01').style.display='none'" title="Close Modal">&times;</span>
+    <form class="modal-content">
+        <div class="container-modal">
+            <h1> <i class="fa-solid fa-trash-can title-icon"
+                    style="padding-right: 1.2rem; font-size: 2.5rem;"></i>Delete Account</h1>
+            <p>Bạn có chắc chắn muốn xóa tài khoản này ?</p>
+            <div class="clearfix">
+                <button type="button" class="cancelbtn" id="cancelBtn" onclick="cancelBtn()">Cancel</button>
+                <button type="button" class="okbtn" id="okBtn" onclick="okBtn()">OK</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+{{!-- XỬ LÝ SỰ KIỆN Ở MODAL --}}
+<script>
+    // GET THE MODAL
+    const form = document.querySelector('form');
+    var modal = document.getElementById('id01');
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            closeModal()
+        }
+    }
+
+    var cancel = document.getElementById('cancelBtn');
+    cancel.addEventListener('click', event => {
+        event.stopPropagation();
+        closeModal()
+    })
+
+    var ok = document.getElementById('okBtn');
+    ok.addEventListener('click', event => {
+        event.stopPropagation();
+        {{!-- form.submit(); --}}
+        formDelete.action = '/admin/delete-cus/delete?_method=DELETE'
+        formDelete.submit();
+    })
+
+    function closeModal() {
+        modal.classList.add("fade-out");
+        setTimeout(function () {
+            modal.style.display = "none";
+            modal.classList.remove("fade-out");
+        }, 500);
+    }
+
+</script>
+
+<script>
+    var navLinkParents = document.querySelectorAll(".nav-link-parent");
+
+    navLinkParents.forEach((navLinkParent) => {
+        var dropdownIcon = navLinkParent.querySelector(".dropdown");
+        navLinkParent.addEventListener("click", (event) => {
+            event.stopPropagation();
+            var navLinkShow = navLinkParent.nextElementSibling;
+            navLinkShow.classList.toggle("active");
+            dropdownIcon.classList.toggle("fa-caret-down");
+            dropdownIcon.classList.toggle("fa-caret-up");
+        });
+    });
+
+    var item = document.querySelectorAll(".nav-link-show-item");
+    item.forEach((a) => {
+        var b = a.querySelector("i");
+        a.addEventListener("click", () => {
+            b.classList.toggle("fa-caret-right");
+        })
+    })
+
+    const butSearchPhoneNumber = document.querySelector('.but-search__phone-number');
+    const inputPhoneNumber = document.querySelector('input[name="phonenumber"]');
+    const formDelete = document.querySelector('.form-delete-acc');
+    const butDeleteAccount = document.querySelector('.but-delete-acc');
+    const allInput = document.querySelectorAll('.form-control');
+    const usernameInput = document.querySelector('input[name="username"]');
+    const nameCusInput = document.querySelector('input[name="name"]');
+    const phonenumberAccountInput = document.querySelector('input[name="phonenumberaccount"]');
+    const emailInput = document.querySelector('input[name="email"]');
+    const messageError = document.querySelector('.message-error');
+    const inputPhonenumer = document.querySelector('.input-phonenumber');
+    console.log(allInput);
+
+    const validate =  function (value) {
+        var regex = /^[0-9]{10,11}$/;
+        return regex.test(value) ? undefined : 'Vui lòng nhập số điện thoại hợp lệ';
+    }
+
+    // console.log(formDelete)
+    butSearchPhoneNumber.addEventListener('click', () => {
+        const message = validate(inputPhoneNumber.value);
+        if(message) {
+            messageError.innerHTML = message;
+        } else {
+            formDelete.action = '/admin/delete-cus/search';
+            formDelete.submit();
+        }
+    })
+
+    butDeleteAccount.onclick = function(e) {
+        e.preventDefault();
+        const check = Array.from(allInput).every(input => {
+            return input.value;
+        });
+        if(check) {
+            {{!-- const answer = window.confirm("Bạn có chắc chắn muốn xóa tài khoản?");
+            if (answer) {
+                formDelete.action = '/admin/delete-cus/delete?_method=DELETE'
+                formDelete.submit();
+            }
+            else {
+                
+            } --}}
+            event.preventDefault();
+            document.getElementById('id01').style.display = 'block';
+        }
+    } 
+
+    
+    inputPhoneNumber.addEventListener('input', function() {
+        messageError.innerHTML = "";
+        usernameInput.value = "";
+        nameCusInput.value = "";
+        phonenumberAccountInput.value = "";
+        emailInput.value = "";
+    })
+    inputPhoneNumber.addEventListener('blur', function() {
+        const message = validate(inputPhoneNumber.value);
+        if(message) {
+            messageError.innerHTML = message;
+        }
+    })
+
+</script>
+
+<script>
+    function displayTime() {
+        var date = new Date();
+        var hour = date.getHours();
+        var minute = date.getMinutes();
+        var second = date.getSeconds();
+        var day = date.getDate();
+        var month = date.getMonth() + 1;
+        var year = date.getFullYear();
+        var meridiem = hour >= 12 ? "PM" : "AM";
+
+        day = addZero(day);
+        month = addZero(month);
+        hour = hour % 12;
+        hour = hour ? hour : 12;
+        minute = addZero(minute);
+        second = addZero(second);
+
+        document.getElementById("clock").innerHTML = hour + ":" + minute + ":" + second + " " + meridiem;
+        document.getElementById("date").innerHTML = day + "/" + month + "/" + year;
+
+        setTimeout(displayTime, 1000);
+    }
+
+    function addZero(num) {
+        return num < 10 ? "0" + num : num;
+    }
+
+    displayTime();
+</script>

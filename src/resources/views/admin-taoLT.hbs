@@ -1,0 +1,545 @@
+<header class="header-admin">
+    <div class="grid">
+        <nav class="header__navbar-admin">
+            <div class="header__navbar-left-admin">
+                <div class="header__navbar-list-left-admin">
+                    <div class="pentagon-admin"></div>
+                    <div class="header__navbar-item-admin">
+                        <a href="/admin/statistics" class="header__navbar-item-link-admin">DANASA</a>
+                    </div>
+                </div>
+            </div>
+            <div class="header__navbar-right-admin">
+                <div class="search-field">
+                    <i class="fa-solid fa-clock" style="font-size: 2rem; padding-right: 1rem;"></i>
+                    <span id="date"></span>
+                    <span id="clock"></span>
+                </div>
+
+                <div class="header__navbar-right-2">
+                    <div class="nav-item">
+                        <div class="dropdown">
+                            <button type="button"
+                                class="nav-link count-indicator dropdown-toggle btn btn-primary-notifi"
+                                fdprocessedid="6335cp" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa-solid fa-hands-clapping" style="font-size: 2.2rem; color: #2a4e8a; margin-right: -0.8rem;"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    {{!-- <div class="nav-item">
+                        <div class="dropdown">
+                            <button type="button" class="nav-link count-indicator dropdown-toggle btn btn-primary-mess"
+                                fdprocessedid="6335cp" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa-solid fa-envelope"></i>
+                                <span class="count-symbol bg-warning" style="font-size: 1.25rem;"></span>
+                            </button>
+                        </div>
+                    </div> --}}
+
+                    <div class="nav-item nav-profile">
+                        <div class="dropdown">
+                            <button type="button" class="nav-link dropdown-toggle btn btn-primary" style="position: relative;
+                                padding: 3rem 0;" aria-haspopup="true" aria-expanded="false">
+                                <div class="nav-profile-text">
+                                    <p class="mb-1 text-black">Xin chào Admin!</p>
+                                </div>
+                            </button>
+                            <button class="logout-admin">
+                                <a href="/login/logout" class="nav-profile-img">
+                                    <i class="fa-solid fa-right-from-bracket" style="font-size: 2rem; color: #2a4e8a;"></i>
+                                    <span class="availability-status online"></span>
+                                </a>
+                            </button>
+                            <div class="show-drop-down"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        </nav>
+    </div>
+</header>
+<div class="container-page-admin-wrap">
+    <div class="grid" style="display: flex;">
+        <div class="sidebar">
+            <ul>
+                <div class="nav-link">
+                    <li class="nav-link-parent">
+                        <div class="item">
+                            <i class="icon-left fa-solid fa-chart-line"></i>
+                            <a href="#">Thống kê</a>
+                        </div>
+                        <i class="dropdown fa-solid fa-caret-down" href=""></i>
+                    </li>
+
+                    <ul class="nav-link-show ">
+                        <li class="nav-link-show-item">
+                            <i class="a fa-solid "></i>
+                            <a class="content" href="/admin/statistics">Doanh thu</a>
+                        </li>
+                        <li class="nav-link-show-item">
+                            <i class="fa-solid "></i>
+                            <a class="content" href="/admin/sales">Doanh số</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-link">
+                    <li class="nav-link-parent">
+                        <div class="item">
+                            <i class="icon-left fa-solid fa-newspaper"></i>
+                            <a href="#">Tin tức </a>
+                        </div>
+                        <i class="dropdown fa-solid fa-caret-down"></i>
+                    </li>
+                    <ul class="nav-link-show">
+                        <li class="nav-link-show-item">
+                            <i class="fa-solid "></i>
+                            <a class="content" href="/admin/list-news">Xem tin tức</a>
+                        </li>
+                        <li class="nav-link-show-item">
+                            <i class="fa-solid "></i>
+                            <a class="content" href="/admin/create-news">Tạo tin tức</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-link">
+                    <li class="nav-link-parent">
+                        <div class="item">
+                            <i class="icon-left fa-sharp fa-solid fa-user" style="font-size: 1.5rem;"></i>
+                            <a href="#">Tài khoản</a>
+                        </div>
+                        <i class="dropdown fa-solid fa-caret-down" style="font-size: 1.5rem;"></i>
+                    </li>
+
+                    <ul class="nav-link-show">
+                        <li class="nav-link-show-item">
+                            <i class="fa-solid "></i>
+                            <a class="content" href="/admin/list-cus">Xem tài khoản</a>
+                        </li>
+                        <li class="nav-link-show-item">
+                            <i class="fa-solid "></i>
+                            <a class="content" href="/admin/delete-cus" >Xóa tài khoản</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-link">
+                    <li class="nav-link-parent">
+                        <div class="item">
+                            <i class="icon-left fa-regular fa-calendar-days" style="font-size: 1.5rem;"></i>
+                            <a href="#">Lịch trình</a>
+                        </div>
+                        <i class="dropdown fa-solid fa-caret-down"></i>
+                    </li>
+
+                    <ul class="nav-link-show">
+                        <li class="nav-link-show-item">
+                            <i class="fa-solid "></i>
+                            <a class="content" href="/admin/list-schedule" >Xem lịch trình</a>
+                        </li>
+                        <li class="nav-link-show-item">
+                            <i class="fa-solid "></i>
+                            <a class="content" href="/admin/create-schedule">Tạo lịch trình</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav-link">
+                    <li class="nav-link-parent">
+                        <div class="item">
+                            <i class="icon-left fa-solid fa-bus-simple"></i>
+                            <a href="#">Xe khách</a>
+                        </div>
+                        <i class="dropdown fa-solid fa-caret-down" href=""></i>
+                    </li>
+
+                    <ul class="nav-link-show ">
+                        <li class="nav-link-show-item">
+                            <i class="a fa-solid "></i>
+                            <a class="content" href="/admin/list-coach">Xem xe khách</a>
+                        </li>
+                        <li class="nav-link-show-item">
+                            <i class="fa-solid "></i>
+                            <a class="content" href="/admin/create-coach">Thêm xe khách</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav-link">
+                    <li class="nav-link-parent">
+                        <div class="item">
+                            <i class="icon-left fa-solid fa-road" style="padding-right: 1.5rem;"></i>
+                            <a href="#">Tuyến xe</a>
+                        </div>
+                        <i class="dropdown fa-solid fa-caret-down" href=""></i>
+                    </li>
+
+                    <ul class="nav-link-show ">
+                        <li class="nav-link-show-item">
+                            <i class="a fa-solid "></i>
+                            <a class="content" href="/admin/list-route">Xem tuyến xe</a>
+                        </li>
+                        <li class="nav-link-show-item">
+                            <i class="fa-solid "></i>
+                            <a class="content" href="/admin/create-route">Thêm tuyến xe</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-link">
+                    <li class="nav-link-parent">
+                        <div class="item">
+                            <i class="icon-left fa-solid fa-archway"></i>
+                            <a href="#">Bến xe</a>
+                        </div>
+                        <i class="dropdown fa-solid fa-caret-down" href=""></i>
+                    </li>
+
+                    <ul class="nav-link-show ">
+                        <li class="nav-link-show-item">
+                            <i class="a fa-solid "></i>
+                            <a class="content" href="/admin/list-station">Xem bến xe</a>
+                        </li>
+                        <li class="nav-link-show-item">
+                            <i class="fa-solid "></i>
+                            <a class="content" href="/admin/create-station">Thêm bến xe</a>
+                        </li>
+                    </ul>
+                </div>
+            </ul>
+        </div>
+
+        <!-- <div class="grid"> -->
+        <div class="container-admin">
+            <div class="title-admin">
+                <i class="fa-solid fa-circle-plus title-icon create-icon"></i>
+                <div class="title-content">TẠO LỊCH TRÌNH</div>
+            </div>
+            <div class="title-line"></div>
+
+
+            <div class="container-create__schedule">
+                <form method="POST" action="/admin/create-schedule/create" id="create-form__schedule" class="form">
+                    <div class="form-group--large">
+                        <div class="form-group width-item-35">
+                            <label for="id-schedule" class="form-label form-schedule">ID :</label>
+                            <input id="id-schedule" name="id-schedule" type="text" class="form-control-schedule"
+                                value="{{idSch}}" disabled>
+                            <!-- <span class="form-message"></span> -->
+                        </div>
+                        <div class="form-group width-item-35">
+                            <label for="route" class="form-label form-schedule">Tuyến <span class="asterisk">*</span>:</label>
+                            <select id="route" name="route" class="limited-height form-control-schedule" rules="required|select">
+                                <option value="0" style="display: none;">Chọn tuyến</option>
+                                {{#each routes}}
+                                <option value="{{this.idRoute}}">{{this.firstProvince}} - {{this.secondProvince}}</option>
+                                {{/each}}
+                            </select>
+                            <span class="form-message"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group--large">
+                        <div class="form-group width-item-35">
+                            <label for="start-province" class="form-label form-schedule">Tỉnh đi <span class="asterisk">*</span>:</label>
+                            <select id="start-province" name="start-province" class="form-control-schedule" rules="required|select">
+                                <option value="0" style="display: none;">-- Tỉnh đi --</option>
+                                {{!-- {{#each direct}}
+                                <option value="{{this.iddirectedroutes}}">{{this.startProvince}}</option>
+                                {{/each}} --}}
+                            </select>
+                            <span class="form-message"></span>
+                        </div>
+                        <div class="form-group width-item-35">
+                            <label for="end-province" class="form-label form-schedule">Tỉnh đến :</label>
+                            <select id="end-province" name="end-province" type="text" class="form-control-schedule" disabled>
+                                <option value="0" style="display: none;">-- Tỉnh đến --</option>
+                                {{!-- {{#each direct}}
+                                <option value="{{this.iddirectedroutes}}">{{this.endProvince}}</option>
+                                {{/each}} --}}
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group--large">
+                        <div class="form-group width-item-35">
+                            <label for="start-station" class="form-label form-schedule">Bến đi <span class="asterisk">*</span>:</label>
+                            <select id="start-station" name="start-station" class="form-control-schedule" rules="required|select">
+                                <option value="0" style="display: none;">Chọn bến đi</option>
+                                {{!-- {{#each stations}}
+                                <option value="{{this.idStation}}">{{this.stationName}}</option>
+                                {{/each}} --}}
+                            </select>
+                            <span class="form-message"></span>
+                        </div>
+                        <div class="form-group width-item-35">
+                            <label for="end-station" class="form-label form-schedule">Bến đến <span class="asterisk">*</span>:</label>
+                            <select id="end-station" name="end-station" class="form-control-schedule" rules="required|select">
+                                <option value="0" style="display: none;">Chọn bến đến</option>
+                                {{!-- {{#each stations}}
+                                <option value="{{this.idStation}}">{{this.stationName}}</option>
+                                {{/each}} --}}
+                            </select>
+                            <span class="form-message"></span>
+                        </div>
+                    </div>
+                    <p class="form-message-time" style="font-size: 12px;margin: 0 0 1rem;color:red "><span class="asterisk">*</span>Thời gian xuất phát sớm trước ít nhất 1 tiếng</p>
+                    <div class="form-group--large">
+                        <div class="form-group width-item-28">
+                            <label for="start-time" class="form-label form-schedule">Thời gian khởi hành <span class="asterisk">*</span>:</label>
+                            <input id="start-time" name="start-time" type="time" class="form-control-schedule" rules="required">
+                            <span class="form-message"></span>
+                        </div>
+                        <div class="form-group width-item-28">
+                            <label for="end-time" class="form-label form-schedule">Thời gian cập bến :</label>
+                            <input id="end-time" name="end-time" type="time" class="form-control-schedule" disabled>
+                        </div>
+                        <div class="form-group width-item-28">
+                            <label for="start-date" class="form-label form-schedule">Ngày khởi hành <span class="asterisk">*</span>:</label>
+                            <input id="start-date" name="start-date" type="date" class="form-control-schedule" rules="required">
+                            <span class="form-message"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group--large">
+                        <div class="form-group width-item-28">
+                            <label for="price" class="form-label form-schedule">Giá <span class="asterisk">*</span>:</label>
+                            <input id="price" name="price" type="text" class="form-control-schedule" rules="required|nospace|integer">
+                            <span class="form-message"></span>
+                        </div>
+                        <div class="form-group width-item-28">
+                            <label for="type-coach" class="form-label form-schedule">Loại xe <span class="asterisk">*</span>:</label>
+                            <select id="type-coach" name="type-coach" class="form-control-schedule" rules="required|select">
+                                <option value="0" style="display: none;">Chọn loại xe</option>
+                                {{#each types}}
+                                <option value="{{this.idType}}">{{this.typeName}}</option>
+                                {{/each}}
+                            </select>
+                            <span class="form-message"></span>
+                        </div>
+                        <div class="form-group width-item-28">
+                            <label for="license-plate" class="form-label form-schedule">Biển số xe <span class="asterisk">*</span>:</label>
+                            <select id="license-plate" name="license-plate" class="form-control-schedule" rules="required|select">
+                                <option value="0" style="display: none;">Chọn biển số xe</option>
+                                {{!-- {{#each coachs}}
+                                <option value="{{this.idCoach}}">{{this.licensePlate}}</option>
+                                {{/each}} --}}
+                            </select>
+                            <span class="form-message"></span>
+                        </div>
+                    </div>
+
+                    <div class="sub-info__schedule">
+                        <div class="duration">Thời gian dự kiến: ... tiếng</div>
+                        <div class="number-seat">Số lượng: ... ghế</div>
+                    </div>
+
+                    <div class="message-error" style="margin-top: 1rem;">{{message}}</div>
+                    <div class="container-submit">
+                        <button class="form-submit">
+                            <span>Upload</span>
+                            <i class="fa-solid fa-upload"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- </div> -->
+    </div>
+
+
+</div>
+
+{{#if failure}}
+<div id="toast">
+    <div class="toast toast--error">
+        <div class="toast__icon">
+            <i class="fas fa-exclamation-circle"></i>
+        </div>
+        <div class="toast__body">
+            <h3 class="toast__title">Failed</h3>
+            <p class="toast__msg">{{failure}}</p>
+        </div>
+        <div class="toast__close">
+            <i class="fas fa-times"></i>
+        </div>
+    </div>
+</div>
+{{/if}}
+
+<a class="changeLink"></a>
+<script>
+    var navLinkParents = document.querySelectorAll(".nav-link-parent");
+    var startTime = document.querySelector('#start-time');
+    var endTime = document.querySelector('#end-time');
+    var startDay = document.getElementById('start-date');
+    var cbb__startProvince = document.querySelector('#start-province');
+    var cbb__Type = document.querySelector('#type-coach');
+    var endProvince = document.querySelector('#end-province');
+    var startStation = document.querySelector('#start-station');
+    var endStation = document.querySelector('#end-station');
+    var cbbRoute = document.querySelector('#route');
+    var aLink = document.querySelector('.changeLink');
+    var message = document.querySelector('.message-error');
+    const today = new Date().toISOString().split('T')[0];
+    startDay.setAttribute('min', today);
+    var hours = 0;
+    cbbRoute.onchange = function(){
+        fetch__directRoute();
+    };
+    startTime.onchange = function(){
+        var start = startTime.valueAsDate;
+        start.setHours(start.getHours()+hours);
+        endTime.valueAsDate = start;
+        if(cbb__Type.value>0) fetch__Coach();
+    }
+    startDay.onchange = function(){
+        var licensePlate = document.querySelector('#license-plate');
+        if(cbb__Type.value>0) fetch__Coach();
+    }
+    var cbb__startProvince = document.querySelector('#start-province');
+    cbb__startProvince.onchange = function(){
+        endProvince.value = cbb__startProvince.value;
+        fetch__dataStation();
+        if(cbb__Type.value>0) fetch__Coach();
+    }
+    cbb__Type.onchange  = function(){
+        fetch__Coach();
+    }
+    function fetch__directRoute(){
+        const url = `/admin/create-schedule/getDirect?route=${cbbRoute.value}`;
+        fetch(url)
+            .then(function(response){
+                return response.json()
+            })
+            .then(function(data){
+                var type = Object.getOwnPropertyNames(data);
+                var hour = type[0],distance = type[1],direct = type[2];
+                var durationElement = document.querySelector('.duration');
+                durationElement.innerHTML = `Thời gian dự kiến: ${data[hour]} tiếng`;
+                hours = data[hour];
+                var html1='',html2='';
+                html1 = '<option value="0" style="display: none;">-- Tỉnh đi --</option>';
+                html2 = '<option value="0" style="display: none;">-- Tỉnh đến --</option>';
+                for(var x of data[direct]){
+                    html1 += `<option value="${x.iddirectedroutes}">${x.startProvince}</option>`
+                    html2 += `<option value="${x.iddirectedroutes}">${x.endProvince}</option>`
+                }
+                cbb__startProvince.innerHTML = html1;
+                endProvince.innerHTML = html2;
+                startStation.innerHTML = '<option value="0" style="display: none;">Chọn bến đi</option>';
+                endStation.innerHTML = '<option value="0" style="display: none;">Chọn bến đến</option>';
+                var licensePlate = document.querySelector('#license-plate');
+                licensePlate.innerHTML = '<option value="0" style="display: none;">Chọn biển số xe</option>';
+                message.innerHTML = '';
+                var start = startTime.valueAsDate;
+                start.setHours(start.getHours()+hours);
+                endTime.valueAsDate = start;
+            })
+            .catch(function(err){
+                console.error(err);
+            })
+
+    }
+    function fetch__Coach(){
+        const url = `/admin/create-schedule/getCoach?direct=${cbb__startProvince.value}&type=${cbb__Type.value}&time=${startTime.value}&day=${startDay.value}`;
+        fetch(url)
+            .then(function(response){
+                return response.json()
+            })
+            .then(function(data){
+                var type = Object.getOwnPropertyNames(data);
+                var coachs = type[1],mess = type[0],seat = type[2];
+                var html1 = '';
+                var seatDiv = document.querySelector('.number-seat');
+                var licensePlate = document.querySelector('#license-plate');
+                html1 = '<option value="0" style="display: none;">Chọn biển số xe</option>';
+                for(var x of data[coachs]){
+                    html1 += `<option value="${x.idCoach}">${x.licensePlate}</option>`;
+                }
+                licensePlate.innerHTML = html1;
+                message.innerHTML = `<p>${data[mess]}</p>`;
+                seatDiv.innerHTML = `Số lượng: ${data[seat]} ghế`;
+            })
+            .catch(function(err){
+                console.error(err);
+            })
+    }
+    function fetch__dataStation(){
+        const url = `/admin/create-schedule/getDataStation?route=${cbb__startProvince.value}`;
+        fetch(url)
+            .then(function(response){
+                return response.json()
+            })
+            .then(function(data){
+                var type = Object.getOwnPropertyNames(data);
+                var end = type[1],start = type[0];
+                var html1 = '',html2='';
+                html1 = '<option value="0" style="display: none;">Chọn bến đi</option>';
+                html2 = '<option value="0" style="display: none;">Chọn bến đến</option>';
+                for(var x of data[start]){
+                    html1 += `<option value="${x.idStation}">${x.stationName}</option>`;
+                }
+                for(var x of data[end]){
+                    html2 += `<option value="${x.idStation}">${x.stationName}</option>`;
+                }
+                startStation.innerHTML = html1;
+                endStation.innerHTML = html2;
+            })
+            .catch(function(err){
+                console.error(err);
+            })
+    };
+    navLinkParents.forEach((navLinkParent) => {
+        var dropdownIcon = navLinkParent.querySelector(".dropdown");
+        navLinkParent.addEventListener("click", (event) => {
+            event.stopPropagation();
+            var navLinkShow = navLinkParent.nextElementSibling;
+            navLinkShow.classList.toggle("active");
+            dropdownIcon.classList.toggle("fa-caret-down");
+            dropdownIcon.classList.toggle("fa-caret-up");
+        });
+    });
+
+    var item = document.querySelectorAll(".nav-link-show-item");
+    item.forEach((a) => {
+        var b = a.querySelector("i");
+        a.addEventListener("click", () => {
+            b.classList.toggle("fa-caret-right");
+        })
+    })
+</script>
+
+<script>
+    function displayTime() {
+        var date = new Date();
+        var hour = date.getHours();
+        var minute = date.getMinutes();
+        var second = date.getSeconds();
+        var day = date.getDate();
+        var month = date.getMonth() + 1;
+        var year = date.getFullYear();
+        var meridiem = hour >= 12 ? "PM" : "AM";
+
+        day = addZero(day);
+        month = addZero(month);
+        hour = hour % 12;
+        hour = hour ? hour : 12;
+        minute = addZero(minute);
+        second = addZero(second);
+
+        document.getElementById("clock").innerHTML = hour + ":" + minute + ":" + second + " " + meridiem;
+        document.getElementById("date").innerHTML = day + "/" + month + "/" + year;
+
+        setTimeout(displayTime, 1000);
+    }
+
+    function addZero(num) {
+        return num < 10 ? "0" + num : num;
+    }
+
+    displayTime();
+</script>

@@ -1,0 +1,166 @@
+.container-xem-tin-tuc{
+    background-color: #F5F5F5;
+    margin-left: 5rem;
+    /* margin-right: 5rem; */
+    width: 70%;
+}
+.frame{
+    margin:0 5rem;
+}
+.frame-obj .title-news{
+    color: #1D38A1;
+}
+.line2{
+    width: 32rem;
+    height: 0.3rem;
+    background-color: var(--blue-color);
+}
+.title-obj-news .title-icon{
+    width: 3rem;
+    margin-right: 0.5rem;
+}
+.title-obj-news .text-title{
+    /* font-weight: bold; */
+    font-size: 20px;
+    margin: 3rem 0 1rem;
+}
+.title-obj-news .line2{
+    width: 18rem;
+    height: 0.2rem;
+    background-color: #1D38A1;
+}
+.content-xem-tin-tuc{
+    margin: 3rem 0;
+    /* background-color: #fff; */
+    /* height: 300px; */
+}
+.grid-full-col{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between;
+    align-items: center; */
+}
+.table-attribute{
+    font-weight: bold;
+    justify-content: space-around;
+    align-items: center;
+}
+.table-attribute .id{
+    /* margin-left: 2rem; */
+    width: 10%;
+}
+.table-attribute .img{
+    width: 30%;
+}
+.table-attribute .title-new{
+    width: 40%;
+}
+.table-attribute  p{
+    text-align: center;
+}
+.table-attribute div {
+    background-color: #DDE4FF;
+    border-radius: 15px;
+    font-size: 16px;
+}
+.list-new .single-new{
+    position: relative;
+}
+.list-new .new{
+    justify-content: space-around;
+    background-color: #fff;
+    max-height: 20rem;
+    min-height: 10rem;
+    margin: 2rem 0;
+    padding: 1rem 0;
+}
+.new .id{
+    width: 10%;
+    align-self: center;
+    text-align: center;
+    /* margin-left: 2rem; */
+    font-size: 20px;
+    font-weight: bold;
+}
+.new .id .id-frame{
+    border: 2px solid #DDE4FF;
+}
+.new .img{
+    width: 30%;
+    height: 15rem;
+}
+.new .title-new{
+    width: 40%;
+    font-size: 16px;
+    padding: 1rem;
+    word-wrap: break-word;
+    line-height: 1.3;
+}
+.new .title-new a{
+    text-decoration: none;
+    color: #000;
+}
+.new .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.single-new .button{
+    position: absolute;
+    right: 2rem;
+    bottom: 1.5rem;
+}
+.single-new .button .del-btn{
+    font-size: 29px;
+    color: #FF0000;
+    margin-right: 1rem;
+    position: relative;
+    top: 0.4rem;
+}
+.single-new .button .update-btn{
+    font-size: 23px;
+    color: #147C2B
+}
+.single-new .button .update-btn:hover,
+.single-new .button .del-btn:hover{
+    cursor: pointer;
+}
+.index{
+    margin: 5rem 0;
+}
+.page-index{
+    justify-content: center;
+}
+.page-index .page-item{
+    list-style-type: none;
+    margin: 0 0.5rem;
+    border: 0.5px solid rgba(52, 98, 173, 0.5);
+}
+.page-item a{
+    font-size: 24px;
+    margin: 0.7rem;
+    line-height: 4rem;
+}
+.page-index .page-link{
+    text-decoration: none;
+    color: #000;
+}
+.page-index .arrow i{
+    font-size: 16px;
+    color: #000;
+}
+.inline{
+    display: flex;
+    flex-direction: row;
+}
+.page-now{
+    background-color: #97acf9;
+}
+.page-now .page-link{
+    color: #fff;
+}
+
+.delete-button, .update-button{
+    background: white;
+    border: none;
+}

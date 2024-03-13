@@ -1,0 +1,239 @@
+<div class="app" style="background-color: #F5F5F5;">
+    <header class="header">
+        <div class="grid">
+            <nav class="header__navbar">
+                <ul class="header__navbar-list-left">
+                    <li class="header__navbar-item">
+                        <a href="/" class="header__navbar-item-link">DANASA
+                        </a>
+                    </li>
+                    <div class="pentagon"></div>
+                </ul>
+
+                <ul class="header__navbar-list-right">
+                    <li class="header__navbar-item">
+                        <a href="/" class="header__navbar-item-link">Trang chủ</a>
+                    </li>
+                    <li class="header__navbar-item">
+                        <a href="/news" class="header__navbar-item-link">Tin tức</a>
+                    </li>
+                    <li class="header__navbar-item">
+                        <a href="/contact" class="header__navbar-item-link">Liên hệ</a>
+                    </li>
+                    <li class="header__navbar-item header__navbar-item-dropdown">
+                        <a href="/login" class="header__navbar-item-link">{{infoLogin}}</a>
+                        <div class="menu-show-container" id="dropdown">
+                            <div class="user">
+                                <i class="fa-solid fa-circle-user"></i>
+                                <h3>{{isLoggedIn}}</h3>
+                            </div>
+                            <div class="button">
+                                <ul>
+                                    <li class="li-dropdown">
+                                        <i class="fa-solid fa-clock-rotate-left" style="color:var(--text-color)"></i>
+                                        <span>
+                                            <a class="itemm" href="/history-buy-ticket">
+                                                Lịch sử đặt vé
+                                            </a>
+                                        </span>
+                                    </li>
+                                    <li class="li-dropdown">
+                                        <i class="fa-solid fa-user-large" style="color:var(--text-color)"></i>
+                                        <span><a href="/updateinfo">
+                                                Thông tin cá nhân
+                                            </a></span>
+                                    </li>
+                                    <li class="li-dropdown">
+                                        <i class="fa-solid fa-user-pen" style="color:var(--text-color)"></i>
+                                        <span><a href="/change-password">
+                                                Thay đổi mật khẩu
+                                            </a></span>
+                                    </li>
+                                    <li class="li-dropdown">
+                                        <i class="fa-solid fa-right-from-bracket" style="color:var(--text-color)"></i>
+                                        <span><a href="/login/logout">
+                                                Đăng xuất
+                                            </a></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <script>
+        const dropdown = document.getElementById("dropdown");
+        const infoLogin = "{{infoLogin}}";
+        if (infoLogin === "Đăng nhập") {
+            dropdown.style.display = "none";
+        }
+    </script>
+
+    <div class="container__login">
+        <div class="grid">
+            <div class="contain__ticketseller-banner">
+                <img src="./img/banner.png" alt="Banner" width="1120px" height="456px " style="opacity: 0.5" />
+            </div>
+            <div class="container__form">
+                {{!-- 1 --}}
+                <form method="POST" action="" id="login-form" class="form">
+                    <p class="form__heading">Đăng nhập</p>
+                    <div class="form-group" style="background-color: white;">
+                        <label for="userName" class="form-label">Tên tài khoản <span class="asterisk">*</span></label>
+                        <input id="userName" name="userName" rules="required|noSpace|nospace" type="text"
+                            placeholder="Nhập tài khoản" class="form-control-login">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="passWord" class="form-label">Mật khẩu <span class="asterisk">*</span></label>
+                        <div class="password-input-wrapper">
+                            <input id="passWord" name="passWord" rules="required|min:6" type="password"
+                                placeholder="Nhập mật khẩu" class="form-control-login">
+                            <span class="toggle-password" onclick="togglePasswordVisibility('passWord')"><i
+                                    class="fas fa-eye-slash"></i></span>
+                        </div>
+                        <span class="form-message" style="margin-top: -1.5rem;"></span>
+                    </div>
+                    <div class="message-error" style="min-height:1.6rem;">{{message}}</div>
+                    <button class="form-submit-login">Đăng nhập</button>
+                    <div class="nav__form">
+                        <span class="nav__message">Bạn chưa có tài khoản ?&nbsp;</span>
+                        <a href="./register" class="nav__link">Đăng ký</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer" style="top: 5rem">
+        <div class="grid">
+            <div class="grid__row-footer">
+                <div class="col grid__column-intro">
+                    <div class="col__column-inner">
+                        <img width="220" height="150" src="./img/footer_danasa.png"
+                            class="attachment-original size-original" alt="">
+                        <div class="icon-box-text last-reset">
+                            <p style="width: 60%; text-align-last: center;">Công ty cổ phần xe khách Danasa Bus
+                                Lines</p>
+                        </div>
+
+                        <div class="social-icons follow-icons">
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col grid__column-lienhe">
+                    <div class="col-inner">
+                        <h3 style="padding-right: -20px;width: 250px;">THÔNG TIN LIÊN HỆ</h3>
+                        <div class="icon-box icon-box-left text-left">
+                            <div class="icon-box-img" style="width: 100%">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <div class="icon-box-text last-reset">
+                                    <p style="width: 90%; ">54 Nguyễn Lương Bằng, Hòa Khánh Bắc,
+                                        Liên Chiểu, Đà Nẵng </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="icon-box icon-box-left text-left">
+                            <div class="icon-box-img" style="width: 70%">
+                                <i class="fa-solid fa-phone" style="font-size: 17px;"></i>
+                                <div class="icon-box-text last-reset">
+                                    <p>076 922 0162</p>
+                                </div>
+                            </div>
+
+                            <div class="icon-box icon-box-left text-left">
+                                <div class="icon-box-img" style="width: 70%">
+                                    <i class="fa-solid fa-envelopes-bulk" style="font-size: 17px;"></i>
+                                    <div class="icon-box-text last-reset">
+                                        <p>danasacoach79@gmail.com</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col grid__column-hinhanh">
+                    <div class="col-inner">
+                        <h3>HÌNH ẢNH</h3>
+                        <div class="grid__row-3-col-3">
+                            <div class="galary-col col">
+                                <div class="container">
+                                    <img src="./img/xe_do.jpg" alt="Xe đỏ">
+                                    <img src="./img/xe_xanh2.jpg" alt="Xe đỏ">
+                                </div>
+                                <div class="container">
+                                    <img src="./img/xe_xanh1.jpg" alt="Xe đỏ">
+                                    <img src="./img/xe_do2.jpg" alt="Xe đỏ">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col grid__column-dangky">
+                    <div class="col-inner">
+                        <h3 style="width: 250px;">HỢP TÁC VÀ LIÊN KẾT</h3>
+                        <p style="font-size: 1.2rem;">Quy chế hoạt động Sàn GDTMĐT</p>
+                        <p style="font-size: 1.2rem;">Bến xe Trung tâm Đà Nẵng</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="line-straight-footer"></div>
+    </footer>
+</div>
+
+
+{{#if failure}}
+<div id="toast">
+    <div class="toast toast--error">
+        <div class="toast__icon">
+            <i class="fas fa-exclamation-circle"></i>
+        </div>
+        <div class="toast__body">
+            <h3 class="toast__title">Failed</h3>
+            <p class="toast__msg">{{failure}}</p>
+        </div>
+        <div class="toast__close">
+            <i class="fas fa-times"></i>
+        </div>
+    </div>
+</div>
+{{/if}}
+
+<script>
+    const allInputs = document.querySelectorAll('.form-control-login');
+    const messageError = document.querySelector('.message-error');
+    allInputs.forEach(input => {
+        input.addEventListener('input', function () {
+            messageError.innerHTML = "";
+        })
+    })
+</script>
+
+<script>
+    function togglePasswordVisibility(inputId) {
+        const passwordInput = document.getElementById(inputId);
+        const togglePassword = passwordInput.nextElementSibling;
+
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            togglePassword.innerHTML = '<i class="fas fa-eye"></i>';
+        } else {
+            passwordInput.type = "password";
+            togglePassword.innerHTML = '<i class="fas fa-eye-slash"></i>';
+        }
+    }
+</script>

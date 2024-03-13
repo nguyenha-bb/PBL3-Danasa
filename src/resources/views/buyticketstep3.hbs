@@ -1,0 +1,583 @@
+<div class="app" style="background-color: #F5F5F5;">
+
+    <header class="header">
+        <div class="grid">
+            <nav class="header__navbar">
+                <ul class="header__navbar-list-left">
+                    <li class="header__navbar-item">
+                        <a href="/" class="header__navbar-item-link">DANASA
+                        </a>
+                    </li>
+                    <div class="pentagon"></div>
+                </ul>
+
+                <ul class="header__navbar-list-right">
+                    <li class="header__navbar-item">
+                        <a href="/" class="header__navbar-item-link">Trang chủ</a>
+                    </li>
+                    <li class="header__navbar-item">
+                        <a href="/news" class="header__navbar-item-link">Tin tức</a>
+                    </li>
+                    <li class="header__navbar-item">
+                        <a href="/contact" class="header__navbar-item-link">Liên hệ</a>
+                    </li>
+                    <li class="header__navbar-item header__navbar-item-dropdown">
+                        <a href="/login" class="header__navbar-item-link link-name">{{infoLogin}}</a>
+                        <div class="menu-show-container" id="dropdown">
+                            <div class="user">
+                                <i class="fa-solid fa-circle-user"></i>
+                                <h3>{{isLoggedIn}}</h3>
+                            </div>
+                            <div class="button">
+                                <ul>
+                                    <li class="li-dropdown">
+                                        <i class="fa-solid fa-clock-rotate-left" style="color:var(--text-color)"></i>
+                                        <span>
+                                            <a class="itemm" href="/history-buy-ticket" >
+                                                Lịch sử đặt vé
+                                            </a>
+                                        </span>
+                                    </li>
+                                    <li class="li-dropdown">
+                                        <i class="fa-solid fa-user-large" style="color:var(--text-color)"></i>
+                                        <span><a href="/updateinfo" >
+                                                Thông tin cá nhân
+                                            </a></span>
+                                    </li>
+                                    <li class="li-dropdown">
+                                        <i class="fa-solid fa-user-pen" style="color:var(--text-color)"></i>
+                                        <span><a href="/change-password" >
+                                                Thay đổi mật khẩu
+                                            </a></span>
+                                    </li>
+                                    <li class="li-dropdown">
+                                        <i class="fa-solid fa-right-from-bracket" style="color:var(--text-color)"></i>
+                                        <span><a href="/login/logout" >
+                                                Đăng xuất
+                                            </a></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <script>
+        const dropdown = document.getElementById("dropdown");
+        const infoLogin = "{{infoLogin}}";
+        if (infoLogin === "Đăng nhập") {
+            dropdown.style.display = "none";
+        }
+    </script>
+
+    <div class="container__ticketConfirm">
+        <div class="grid">
+            <div class="container__content">
+                <div class="container__content-nameStep">
+                    <h2>THÔNG TIN HÀNH KHÁCH</h2>
+                </div>
+                <div class="container__content-lineStep">
+                    <div class="steps-line">
+                        <div class="step-circle">
+                            <div class="step-circle-first">
+                                <div class="text">1</div>
+                                <div class="title-active">
+                                    <span id="step-1">
+                                        Chọn tuyến
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="steps-line">
+                        <div class="step-circle">
+                            <div class="step-circle-second">
+                                <div class="text">2</div>
+                                <div class="title-active">
+                                    <span id="step-1">
+                                        Xác nhận lộ trình
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="steps-line">
+                        <div class="step-circle">
+                            <div class="step-circle-third" style="background-color: white;">
+                                <div class="text" style="color: #4b8efa;">3</div>
+                                <div class="title-active">
+                                    <span id="step-2">
+                                        Thông tin hành khách
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="steps-line">
+                        <div class="step-circle">
+                            <div class="step-circle-fourth" style="background-color: #eff1f2; border: none;">
+                                <div class="text" style="color: #637280;">4</div>
+                                <div class="title-active">
+                                    <span id="step-1">
+                                        Thanh toán
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="container__content-lineStraight">
+                    <div class="step-line step-line-second"></div>
+                </div>
+            </div>
+
+            {{#if_eq number 16}}
+            <div class="container__seat type-normal 16-seat">
+                <div class="container__seat-content">
+                    <div class="container__seat-heading">
+                        <div class="seat-heading">TẦNG DƯỚI</div>
+                        <div class="seat-heading">TẦNG TRÊN</div>
+                    </div>
+                    <div class="container__seat-list">
+                        <div class="container__seat-number first-floor">
+                            <div class="seat-column first-column">
+                                {{#each firstArr}}
+                                    {{#if_eq this.statusSeat 1}}
+                                        <div class="seat-info">
+                                            <i class="fa-solid fa-couch"></i>
+                                            <span class="seat-desc">{{this.nameSeat}}</span>
+                                        </div>
+                                    {{else}}
+                                        <div class="seat-info empty">
+                                            <i class="fa-solid fa-couch"></i>
+                                            <span class="seat-desc">{{this.nameSeat}}</span>
+                                        </div>
+                                    {{/if_eq}}
+                                {{/each}}
+                            </div>
+                            <div class="seat-column second-column">
+                                {{#each secondArr}}
+                                    {{#if_eq this.statusSeat 1}}
+                                        <div class="seat-info">
+                                            <i class="fa-solid fa-couch"></i>
+                                            <span class="seat-desc">{{this.nameSeat}}</span>
+                                        </div>
+                                    {{else}}
+                                        <div class="seat-info empty">
+                                            <i class="fa-solid fa-couch"></i>
+                                            <span class="seat-desc">{{this.nameSeat}}</span>
+                                        </div>
+                                    {{/if_eq}}
+                                {{/each}}
+                            </div>
+                        </div>
+                        <div class="container__seat-number second-floor">
+                            <div class="seat-column first-column">
+                                {{#each thirdArr}}
+                                    {{#if_eq this.statusSeat 1}}
+                                        <div class="seat-info">
+                                            <i class="fa-solid fa-couch"></i>
+                                            <span class="seat-desc">{{this.nameSeat}}</span>
+                                        </div>
+                                    {{else}}
+                                        <div class="seat-info empty">
+                                            <i class="fa-solid fa-couch"></i>
+                                            <span class="seat-desc">{{this.nameSeat}}</span>
+                                        </div>
+                                    {{/if_eq}}
+                                {{/each}}
+                            </div>
+                            <div class="seat-column second-column">
+                                {{#each fourthArr}}
+                                    {{#if_eq this.statusSeat 1}}
+                                        <div class="seat-info">
+                                            <i class="fa-solid fa-couch"></i>
+                                            <span class="seat-desc">{{this.nameSeat}}</span>
+                                        </div>
+                                    {{else}}
+                                        <div class="seat-info empty">
+                                            <i class="fa-solid fa-couch"></i>
+                                            <span class="seat-desc">{{this.nameSeat}}</span>
+                                        </div>
+                                    {{/if_eq}}
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container__seat-status">
+                        <div class="status-seat status-empty">
+                            <div class="status-box"></div>
+                            <span class="status-note">Trống</span>
+                        </div>
+                        <div class="status-seat status-chosen">
+                            <div class="status-box"></div>
+                            <span class="status-note">Đang chọn</span>
+                        </div>
+                        <div class="status-seat status-booked">
+                            <div class="status-box"></div>
+                            <span class="status-note">Đã đặt</span>
+                        </div>
+                    </div>
+                    <div class="container_info-ticket">
+                        <div class="info-ticket__number">
+                            <span class="number-ticket">0</span>
+                            <span>vé</span>
+                        </div>
+                        <div class="info-ticket__price">
+                            <span class="price-desc">Tổng tiền:&nbsp;</span>
+                            <span class="price-ticket">0VND</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{else}}
+            <div class="container__seat other-type 22-seat">
+                <div class="container__seat-content">
+                    <div class="container__seat-heading">
+                        <div class="seat-heading">TẦNG DƯỚI</div>
+                        <div class="seat-heading">TẦNG TRÊN</div>
+                    </div>
+                    <div class="container__seat-list">
+                        <div class="container__seat-number first-floor">
+                            <div class="seat-column first-column">
+                                {{#each firstArr}}
+                                    {{#if_eq this.statusSeat 1}}
+                                        <div class="seat-info">
+                                            <i class="fa-solid fa-couch"></i>
+                                            <span class="seat-desc">{{this.nameSeat}}</span>
+                                        </div>
+                                    {{else}}
+                                        <div class="seat-info empty">
+                                            <i class="fa-solid fa-couch"></i>
+                                            <span class="seat-desc">{{this.nameSeat}}</span>
+                                        </div>
+                                    {{/if_eq}}
+                                {{/each}}
+                            </div>
+                            <div class="seat-column second-column">
+                                {{#each secondArr}}
+                                    {{#if_eq this.statusSeat 1}}
+                                        <div class="seat-info">
+                                            <i class="fa-solid fa-couch"></i>
+                                            <span class="seat-desc">{{this.nameSeat}}</span>
+                                        </div>
+                                    {{else}}
+                                        <div class="seat-info empty">
+                                            <i class="fa-solid fa-couch"></i>
+                                            <span class="seat-desc">{{this.nameSeat}}</span>
+                                        </div>
+                                    {{/if_eq}}
+                                {{/each}}
+                            </div>
+                        </div>
+                        <div class="container__seat-number second-floor">
+                            <div class="seat-column first-column">
+                                {{#each thirdArr}}
+                                    {{#if_eq this.statusSeat 1}}
+                                        <div class="seat-info">
+                                            <i class="fa-solid fa-couch"></i>
+                                            <span class="seat-desc">{{this.nameSeat}}</span>
+                                        </div>
+                                    {{else}}
+                                        <div class="seat-info empty">
+                                            <i class="fa-solid fa-couch"></i>
+                                            <span class="seat-desc">{{this.nameSeat}}</span>
+                                        </div>
+                                    {{/if_eq}}
+                                {{/each}}
+                            </div>
+                            <div class="seat-column second-column">
+                                {{#each fourthArr}}
+                                    {{#if_eq this.statusSeat 1}}
+                                        <div class="seat-info">
+                                            <i class="fa-solid fa-couch"></i>
+                                            <span class="seat-desc">{{this.nameSeat}}</span>
+                                        </div>
+                                    {{else}}
+                                        <div class="seat-info empty">
+                                            <i class="fa-solid fa-couch"></i>
+                                            <span class="seat-desc">{{this.nameSeat}}</span>
+                                        </div>
+                                    {{/if_eq}}
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container__seat-status">
+                        <div class="status-seat status-empty">
+                            <div class="status-box"></div>
+                            <span class="status-note">Trống</span>
+                        </div>
+                        <div class="status-seat status-chosen">
+                            <div class="status-box"></div>
+                            <span class="status-note">Đang chọn</span>
+                        </div>
+                        <div class="status-seat status-booked">
+                            <div class="status-box"></div>
+                            <span class="status-note">Đã đặt</span>
+                        </div>
+                    </div>
+                    <div class="container_info-ticket">
+                        <div class="info-ticket__number">
+                            <span class="number-ticket">0</span>
+                            <span>vé</span>
+                        </div>
+                        <div class="info-ticket__price">
+                            <span class="price-desc">Tổng tiền:&nbsp;</span>
+                            <span class="price-ticket">0VND</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/if_eq}}
+
+            <div class="container__info-body">
+                <div class="container__info-customer">
+                    <form action="" id="customer-form" class="form cus-form__buy-ticket" method="POST">
+                        <p class="form__heading">THÔNG TIN HÀNH KHÁCH</p>
+                        <div class="form-group">
+                            <label for="fullname" class="form-label">Họ và tên <span class="asterisk">*</span></label>
+                            <input id="fullname" name="fullname" rules="required|noSpace" type="text"
+                                placeholder="VD: Nguyễn Văn A" class="form-control" value="{{infoCus.name}}">
+                            <span class="form-message"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="phonenumber" class="form-label">Số điện thoại <span class="asterisk">*</span></label>
+                            <input id="phonenumber" name="phonenumber" rules="required|phonenumber|noSpace" type="tel"
+                                placeholder="VD: 0905312145" class="form-control" value="{{infoCus.phoneNumber}}">
+                            <span class="form-message"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email <span class="asterisk">*</span></label>
+                            <input id="email" name="email" rules="required|email|noSpace" type="text"
+                                placeholder="VD: sv@gmail.com" class="form-control" value="{{infoCus.email}}">
+                            <span class="form-message"></span>
+                        </div>
+                        {{!-- <div class="form-group--large">
+                            <div class="form-group">
+                                <label for="province" class="form-label">Tỉnh/TP *</label>
+                                <select id="province" name="province" rules="required" class="form-control">
+                                    <option value="">Chọn Tỉnh/TP</option>
+                                    <option value="1">Hà Nội</option>
+                                    <option value="2">Hải Phòng</option>
+                                    <option value="3">Đà Nẵng</option>
+                                    <option value="4">TP. HCM</option>
+                                </select>
+                                <span class="form-message"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="district" class="form-label">Quận/Huyện *</label>
+                                <select id="district" name="district" rules="required" class="form-control">
+                                    <option value="">Chọn Quận/Huyện</option>
+                                    <option value="1">Hải Châu</option>
+                                    <option value="2">Hòa Khánh</option>
+                                    <option value="3">Cẩm Lệ</option>
+                                </select>
+                                <span class="form-message"></span>
+                            </div>
+                        </div> --}}
+                        <div class="form-group">
+                            <input id="policy-rule" name="policy-rule" rules="required" type="checkbox"
+                                class="form-control">
+                            <label for="policy-rule" class="policy-rule">Chấp nhận điều khoản và lưu ý</label>
+                            <span class="form-message policy-rule" style="color: red; font-size: 1.2rem;"></span>
+                        </div>
+                        <button type="submit" class="submit-form" style="display: none;"></button>
+                    </form>
+                </div>
+                <div class="container__info-policy">
+                    <p class="policy-heading">ĐIỀU KHOẢN & LƯU Ý</p>
+                    <div class="policy-content">
+                        <p class="policy-detail">(*) Quý khách vui lòng mang email có chứa mã vé đến văn phòng để đổi vé
+                            lên
+                            xe trước giờ xuất bến ít nhất 60 phút để chúng tôi trung chuyển.
+                        </p>
+                        <p class="policy-detail">(*) Thông tin hành khách phải chính xác, nếu không sẽ không thể lên xe
+                            hoặc
+                            hủy/đổi vé.
+                        </p>
+                        <p class="policy-detail">(*) Quý khách không được đổi trả vé vào các ngày lễ Tết, phí hủy vé
+                            10%.
+                        </p>
+                        <p class="policy-detail">(*) Nếu quý khách có nhu cầu trung chuyển, vui lòng liên hệ 1900 0236
+                            trước
+                            khi đặt vé. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="message-error-seat" style="min-height: 2rem;"></div>
+            <div class="but grid-full-col">
+                <button class="back" style="cursor: pointer;">QUAY LẠI</button>
+                <button class="confirm" style="cursor: pointer;">TIẾP THEO</button>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <footer class="footer">
+        <div class="grid">
+            <div class="grid__row-footer">
+                <div class="col grid__column-intro">
+                    <div class="col__column-inner">
+                        <img width="220" height="150" src="../img/footer_danasa.png"
+                            class="attachment-original size-original" alt="">
+                        <div class="icon-box-text last-reset">
+                            <p style="width: 60%; text-align-last: center;">Công ty cổ phần xe khách Danasa Bus
+                                Lines</p>
+                        </div>
+
+                        <div class="social-icons follow-icons">
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col grid__column-lienhe">
+                    <div class="col-inner">
+                        <h3 style="padding-right: -20px;width: 250px;">THÔNG TIN LIÊN HỆ</h3>
+                        <div class="icon-box icon-box-left text-left">
+                            <div class="icon-box-img" style="width: 100%">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <div class="icon-box-text last-reset">
+                                    <p style="width: 90%; ">54 Nguyễn Lương Bằng, Hòa Khánh Bắc,
+                                        Liên Chiểu, Đà Nẵng </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="icon-box icon-box-left text-left">
+                            <div class="icon-box-img" style="width: 70%">
+                                <i class="fa-solid fa-phone" style="font-size: 17px;"></i>
+                                <div class="icon-box-text last-reset">
+                                    <p>076 922 0162</p>
+                                </div>
+                            </div>
+
+                            <div class="icon-box icon-box-left text-left">
+                                <div class="icon-box-img" style="width: 70%">
+                                    <i class="fa-solid fa-envelopes-bulk" style="font-size: 17px;"></i>
+                                    <div class="icon-box-text last-reset">
+                                        <p>danasacoach79@gmail.com</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col grid__column-hinhanh">
+                    <div class="col-inner">
+                        <h3>HÌNH ẢNH</h3>
+                        <div class="grid__row-3-col-3">
+                            <div class="galary-col col">
+                                <div class="container">
+                                    <img src="../img/xe_do.jpg" alt="Xe đỏ">
+                                    <img src="../img/xe_xanh2.jpg" alt="Xe đỏ">
+                                </div>
+                                <div class="container">
+                                    <img src="../img/xe_xanh1.jpg" alt="Xe đỏ">
+                                    <img src="../img/xe_do2.jpg" alt="Xe đỏ">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col grid__column-dangky">
+                    <div class="col-inner">
+                        <h3 style="width: 250px;">HỢP TÁC VÀ LIÊN KẾT</h3>
+                        <p style="font-size: 1.2rem;">Quy chế hoạt động Sàn GDTMĐT</p>
+                        <p style="font-size: 1.2rem;">Bến xe Trung tâm Đà Nẵng</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="line-straight-footer"></div>
+    </footer>
+</div>
+
+<div class="price-schedule" style="display: none;">{{priceSchedule}}</div>
+
+<script>
+    const seatEmptys = document.querySelectorAll('.seat-info.empty');
+    const priceSchedule = document.querySelector('.price-schedule');
+    const price = priceSchedule.innerHTML;
+    const priceTicket = document.querySelector('.price-ticket');
+    const confirmBtn = document.querySelector('.confirm');
+    const backBtn = document.querySelector('.back');
+    const formcus = document.querySelector('.cus-form__buy-ticket');
+    const messageErrorSeat = document.querySelector('.message-error-seat');
+
+    if(seatEmptys) {
+        seatEmptys.forEach(seatEmpty => {
+            seatEmpty.style.cursor = "pointer";
+            seatEmpty.onclick = function() {
+                seatEmpty.classList.toggle('empty');
+                seatEmpty.classList.toggle('chosen');
+                const numberTicket = document.querySelector('.number-ticket');
+                const seatChosens = document.querySelectorAll('.seat-info.chosen');
+                numberTicket.innerHTML = seatChosens.length;
+                const total = (seatChosens.length * price);
+                priceTicket.innerHTML =  total.toLocaleString() +'VND';
+                messageErrorSeat.innerHTML = "";
+            }
+        })
+    }
+    const id = (location.pathname.split('/').slice(-1)[0]);
+
+    backBtn.onclick = function() {
+        history.back();
+    }
+
+    confirmBtn.onclick = function() {
+        const policyCheckBox = document.querySelector('#policy-rule');
+        if(policyCheckBox.checked == false) {
+            const policyMessage = document.querySelector('.form-message.policy-rule');
+            policyMessage.innerHTML = "Vui lòng chọn đồng ý chính sách nhà xe";
+        } else {
+            const submitForm = document.querySelector('.submit-form');
+        
+            const seatChosens = document.querySelectorAll('.seat-info.chosen');
+            
+            if(seatChosens.length === 0) {
+                messageErrorSeat.innerHTML = "Vui lòng chọn ít nhất 1 ghế ngồi!";
+            } else {
+                const totalNumber = seatChosens.length;
+                const totalPrice = seatChosens.length * price;
+                const arrSeat = [];
+                seatChosens.forEach(seatChosen => {
+                    const seatDesc = seatChosen.querySelector('.seat-desc').innerHTML;
+                    arrSeat.push(seatDesc);
+                })
+                const seats = arrSeat.join();
+
+                formcus.action = `/buy-ticket-step4?id=${id}&totalNumber=${totalNumber}&totalPrice=${totalPrice}&seats=${seats}`;
+
+                submitForm.click();
+            }
+            
+        }
+
+    }
+
+
+    
+</script>
+
+<script>
+    const linkName = document.querySelector('.link-name');
+    if(linkName.innerHTML !== "Đăng nhập") {
+        linkName.href = "#";
+    }
+</script>

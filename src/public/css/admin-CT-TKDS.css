@@ -1,0 +1,71 @@
+.container-admin {
+    height: 80rem;
+}
+
+.container-table {
+    margin-top: 2rem;
+}
+
+.statistic-icon {
+    font-size: 1.6rem; 
+    color: #1D38A1;
+}
+
+.container-admin .title-line.statistic-line {
+    width: 14.5rem;
+}
+
+.container-header {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.type-sort{
+    background-color: white;
+}
+
+.container-header .heading {
+    color: #1D38A1;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 0.4rem;
+    padding: 2rem 0;
+}
+
+.container-header .type-sort {
+    width: 15rem;
+    border-radius: 2rem;
+    padding: 1.2rem 1rem;
+    border-color: #F5F5F5;
+    font-size: 1.4rem;
+    margin-left: 12rem;
+}
+
+.tbhead-stt {
+    width: 15rem;
+}
+
+.tbhead-route {
+    width: 45rem;
+}
+
+.tbhead-revenue {
+    width: 30rem;
+}
+
+.section-item.stt {
+    width: 15rem;
+}
+
+.section-item.route {
+    width: 50rem;
+}
+
+.section-item.revenue {
+    width: 30rem;
+}
+
+.section-item {
+    font-weight: 400;
+}

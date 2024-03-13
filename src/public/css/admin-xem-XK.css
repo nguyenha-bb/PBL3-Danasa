@@ -1,0 +1,65 @@
+.line-straight-xemXK{
+    width: 16rem;
+    height: 0.2rem;
+    background: #1d38a1;
+    margin-top: -.5rem;
+}
+.content-coach{
+    padding: 2rem 3rem 2rem 4rem;
+}
+.coach__license-plate,
+.coach__type,
+.coach__number-seat,
+.content-xem-xe-khach .type-coach,
+.content-xem-xe-khach .number-seat-coach,
+.content-xem-xe-khach .license-plate{
+    width: 18%;
+}
+.coach__route-active,
+.content-xem-xe-khach .route-active{
+    width: 30%;
+}
+.coach__delete-coach{
+    width: 8%;
+    /* position: relative; */
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.content-xem-xe-khach .delete-coach{
+    width: 8%;
+}
+.content-xem-xe-khach .table-attribute p{
+    font-size: 13px;
+}
+.filter-coach .cbb-admin{
+    height: 4rem;
+    border-radius: 2rem;
+    font-size: 1.4rem;
+    padding: 0 2rem;
+    border-color: #F5F5F5;
+}
+.list-coach .coach{
+    justify-content: space-between;
+    text-align: center;
+    background-color: #fff;
+    margin: 1rem 0;
+    max-height: 4rem;
+    font-size: 13px;
+}
+.filter-coach{
+    margin-bottom: 2rem;
+}
+.button-delete{
+    background: #dde4ff;
+    border: solid 1.5px #acbdff;
+    /* position: relative; */
+    border-radius: 2rem;
+    height: 2.5rem;
+    cursor: pointer;
+    min-width: 100%;
+    text-align: center;
+    margin-left: -2rem;
+}
+.button-delete:hover{
+    background-color: rgba(221, 228, 255, 0.8)
+}

@@ -1,0 +1,119 @@
+/* .contain__ticketseller-banner img {
+  opacity: 0.5;
+} */
+
+.container__form {
+  position: relative;
+  top: -40rem;
+  left: 14rem;
+  background-color: #fff;
+  width: 77%;
+}
+
+.container__login .grid {
+  height: 55rem;
+}
+
+.form {
+  width: 100%;
+  height: 100%;
+  padding: 5rem 7rem;
+}
+
+.form .form__heading {
+  margin: 0;
+  color: #000;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #25467A;
+  margin-bottom: 3rem;
+}
+
+.form-group {
+  display: flex;
+  margin-bottom: 16px;
+  flex-direction: column;
+}
+
+.form-label,
+.form-message {
+  text-align: left;
+  min-height: 2rem;
+}
+
+.form-label {
+  font-weight: bold;
+  padding-bottom: 6px;
+  line-height: 1.8rem;
+  font-size: 1.4rem;
+}
+
+.form-control-login {
+  height: 40px;
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #b3b3b3;
+  border-radius: 3px;
+  outline: none;
+  font-size: 1.4rem;
+  background-color: white;
+}
+
+.form-control-login:hover {
+  border-color: #1dbfaf;
+}
+
+.form-group.invalid .form-control-login {
+  border-color: #f33a58;
+}
+
+.form-group.invalid .form-message {
+  color: #f33a58;
+}
+
+.form-message {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  padding: 4px 0 0;
+}
+
+.form-submit-login {
+  outline: none;
+  background-color: #4570B7;
+  color:#fff;
+  margin-top: 12px;
+  padding: 15px 16px;
+  font-weight: normal;
+  border: none;
+  width: 12rem;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.nav__form {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav__message, .nav__link {
+  color: #4570B7;
+  font-size: 1.6rem;
+}
+
+.nav__link:hover{
+  color: #3b7ce8;
+}
+
+.form-group.invalid .form-message {
+  color:#f33a58;
+}
+
+.message-error {
+  color: red;
+  font-size: 1.4rem;
+}
+
+.asterisk{
+  color: red;
+}

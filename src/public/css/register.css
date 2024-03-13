@@ -1,0 +1,27 @@
+.container__register .grid {
+    height: 95rem;
+}
+
+.form-group--large {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-group--large .form-group {
+    width: 48%;
+}
+
+.container__form {
+    /* box-shadow: 10px 10px 5px #aaaaaa; */
+    -webkit-box-shadow: 0 0 0.15rem #a4a3a3;
+    box-shadow: 0 0 0.15rem #a4a3a3;
+}
+
+.form-control-register{
+    border: 1px solid #b3b3b3;
+    border-radius: 15px;
+    height: 4rem;
+    width: 100%;
+    padding-left: 2rem;
+    font-size: 1.3rem;
+}

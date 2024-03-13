@@ -1,0 +1,137 @@
+.container-admin {
+    height: fit-content;
+}
+
+.create-icon {
+    font-size: 1.7rem; 
+    color: #1D38A1;
+}
+
+.form {
+    background-color: #fff;
+    margin-top: 3rem;
+    padding: 4rem 7rem;
+    -webkit-box-shadow: 0 0 0.4rem #a4a3a3;
+}
+
+.form-group {
+    display: flex;
+    margin-bottom: 25px;
+    flex-direction: column;
+}
+  
+.form-label.form-schedule,
+.form-message {
+    text-align: left;
+}
+
+.form-label.form-schedule {
+    font-weight: bold;
+    padding-bottom: 6px;
+    line-height: 0rem;
+    font-size: 1.4rem;
+}
+
+.form-control-schedule {
+    height: 40px;
+    padding: 8px 12px;
+    border-radius: 3px;
+    outline: none;
+    font-size: 1.4rem;
+    background-color: #dde4ff;
+    border: none;
+}
+
+.form-control-schedule:hover {
+    /* border-color: #1dbfaf; */
+}
+
+.form-group.invalid .form-control-schedule {
+    border-color: #f33a58;
+}
+
+.form-group.invalid .form-message {
+    color: #f33a58;
+}
+
+.form-message {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    padding: 4px 0 0;
+}
+
+.container-submit {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.container-submit .form-submit {
+    outline: none;
+    background-color: #DDE4FF;
+    border: 0.2rem solid #9CAEF9;
+    color:#000;
+    margin-top: 12px;
+    padding: 15px 16px;
+    font-weight: normal;
+    width: 12rem;
+    font-size: 1.7rem;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.form-group--large {
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.form-group--large .width-item-35 {
+    width: 35%;
+    margin-right: 9rem;
+}
+
+.form-group--large .width-item-28 {
+    width: 28%;
+    
+}
+
+.width-item-28 + .width-item-28 {
+    margin-left: 5rem;
+}
+
+
+.sub-info__schedule {
+    display: flex;
+    margin-top: 0.5rem;
+}
+
+/* .duration {
+    margin-right: rem;
+} */
+
+.duration, .number-seat {
+    width: 36.5%;
+    font-size: 1.4rem;
+    color: #000000;
+    opacity: 0.6;
+    font-style: italic;
+}
+
+input:disabled, select:disabled {
+    color: #000000;
+    font-style: italic;
+    border: none;
+}
+
+.width-item-35 input, .width-item-35 select {
+    background-color: #DDE4FF;
+    border: none;
+    font-size: 1.4rem;
+    opacity: 1;
+}
+
+input[type=text]:disabled {
+    padding-left: 1.5rem;
+}

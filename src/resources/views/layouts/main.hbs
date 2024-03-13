@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/register.css">
+    <link rel="stylesheet" href="/css/buyticketstep3.css">
+    <link rel="stylesheet" href="/css/buyticketstep4.css">
+    <link rel="stylesheet" href="/css/contact.css">
+    <link rel="stylesheet" href="/css/updateinfo.css">
+    <link rel="stylesheet" href="/css/admin-xem-xoaTK.css">
+    <link rel="stylesheet" href="/css/admin-xem-LT.css">
+    <link rel="stylesheet" href="/css/admin-tao-LT.css">
+    <link rel="stylesheet" href="/css/admin-sua-LT.css">
+    <link rel="stylesheet" href="/css/admin-CT-TKDT.css">
+    <link rel="stylesheet" href="/css/admin-xem-TT.css">
+    <link rel="stylesheet" href="/css/admin-TT.css">
+    <link rel="stylesheet" href="/css/admin-TK.css">
+    <link rel="stylesheet" href="/css/admin-xem-XK.css">
+    <link rel="stylesheet" href="/css/admin-xem-TX.css">
+    <link rel="stylesheet" href="/css/admin-tao-TX.css">
+    <link rel="stylesheet" href="/css/admin-XK.css">
+    <link rel="stylesheet" href="/css/admin-TK.css">
+    <link rel="stylesheet" href="/css/modal.css">
+    <link rel="stylesheet" href="/css/modal_detail.css">
+    <link rel="stylesheet" href="/css/toast.css">
+    <link rel="stylesheet" href="/css/admin-XemBX.css">
+    <link rel="stylesheet" href="/css/admin-TaoBX.css">
+    <link rel="stylesheet" href="/css/toast.css">
+    <link rel="stylesheet" href="/css/error.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    {{!--
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    {{!-- {{> header}} --}}
+
+    {{{body}}}
+    {{!-- {{> footer}} --}}
+    <div id="scroll-to-top"><i class="fa-solid fa-arrow-up"></i></div>
+    <script src="/javascripts/validator.js"></script>
+    <script src="/javascripts/validNews.js"></script>
+    <script src="/javascripts/validatorSchedule.js"></script>
+
+    <script> new Validator('#login-form'); </script>
+    <script> new Validator('#register-form'); </script>
+    <script> new Validator("#customer-form"); </script>
+    <script> new Validator('#changepw-form'); </script>
+    <script> new ValidNews('#createNews'); </script>
+    <script> new ValidNews('#update-form__news'); </script>
+    <script> new Validator('#changein4-form'); </script>
+    <script> new Validator('#create-form__schedule');</script>
+    <script> new Validator('#form-delete__account');</script>
+    <script> new Validator('#create-form__coach');</script>
+    <script> new ValidatorSchedule('#update-form__schedule')</script>
+    <script> new Validator('#edit-form__route')</script>
+    <script> new Validator('#create-form__route')</script>
+    <script> new Validator('#delete-form__route')</script>
+    <script> new Validator('#create-form__station')</script>
+    <script> new Validator('#update-form__station')</script>
+</body>
+
+</html>
+
+
+{{!-- Scroll --}}
+<script>
+    window.addEventListener('scroll', function () {
+        var scrollButton = document.getElementById('scroll-to-top');
+
+        // Kiểm tra vị trí cuộn của trang
+        if (window.pageYOffset > 200) { // Hiển thị nút khi cuộn xuống 200px
+            scrollButton.style.display = 'block';
+        } else {
+            scrollButton.style.display = 'none';
+        }
+    });
+
+    document.getElementById('scroll-to-top').addEventListener('click', function () {
+        scrollToTop(500);
+    });
+
+    function scrollToTop(scrollDuration) {
+        var scrollStep = -window.scrollY / (scrollDuration / 15);
+        var scrollInterval = setInterval(function () {
+            if (window.scrollY !== 0) { //nếu chưa lên đầu
+                window.scrollBy(0, scrollStep);
+            } else {
+                clearInterval(scrollInterval); // dừng vòng lặp
+            }
+        }, 15);
+    }
+</script>
+
+
+{{!-- Toast message --}}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var toast = document.getElementById('toast');
+
+        toast.addEventListener('animationend', function () {
+            setTimeout(function () {
+                toast.style.display = 'none';
+            }, 2000);
+        });
+
+        var closeIcon = document.querySelector('.toast__close');
+        closeIcon.addEventListener('click', function () {
+            toast.style.display = 'none';
+        });
+
+        if (performance.navigation.type === 2) {
+            toast.style.display = 'none';
+        }
+    });
+</script>

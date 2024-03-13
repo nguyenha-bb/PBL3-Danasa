@@ -1,0 +1,396 @@
+<header class="header-admin">
+    <div class="grid">
+        <nav class="header__navbar-admin">
+            <div class="header__navbar-left-admin">
+                <div class="header__navbar-list-left-admin">
+                    <div class="pentagon-admin"></div>
+                    <div class="header__navbar-item-admin">
+                        <a href="/admin/statistics" class="header__navbar-item-link-admin">DANASA</a>
+                    </div>
+                </div>
+            </div>
+            <div class="header__navbar-right-admin">
+                <div class="search-field">
+                    <i class="fa-solid fa-clock" style="font-size: 2rem; padding-right: 1rem;"></i>
+                    <span id="date"></span>
+                    <span id="clock"></span>
+                </div>
+
+                <div class="header__navbar-right-2">
+                    <div class="nav-item">
+                        <div class="dropdown">
+                            <button type="button"
+                                class="nav-link count-indicator dropdown-toggle btn btn-primary-notifi"
+                                fdprocessedid="6335cp" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa-solid fa-hands-clapping"
+                                    style="font-size: 2.2rem; color: #2a4e8a; margin-right: -0.8rem;"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    {{!-- <div class="nav-item">
+                        <div class="dropdown">
+                            <button type="button" class="nav-link count-indicator dropdown-toggle btn btn-primary-mess"
+                                fdprocessedid="6335cp" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa-solid fa-envelope"></i>
+                                <span class="count-symbol bg-warning" style="font-size: 1.25rem;"></span>
+                            </button>
+                        </div>
+                    </div> --}}
+
+                    <div class="nav-item nav-profile">
+                        <div class="dropdown">
+                            <button type="button" class="nav-link dropdown-toggle btn btn-primary" style="position: relative;
+                                padding: 3rem 0;" aria-haspopup="true" aria-expanded="false">
+                                <div class="nav-profile-text">
+                                    <p class="mb-1 text-black">Xin chào Admin!</p>
+                                </div>
+                            </button>
+                            <button class="logout-admin">
+                                <a href="/login/logout" class="nav-profile-img">
+                                    <i class="fa-solid fa-right-from-bracket"
+                                        style="font-size: 2rem; color: #2a4e8a;"></i>
+                                    <span class="availability-status online"></span>
+                                </a>
+                            </button>
+                            <div class="show-drop-down"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        </nav>
+    </div>
+</header>
+<div class="container-page-admin-wrap">
+    <div class="grid" style="display: flex;">
+        <div class="sidebar">
+            <ul>
+                <div class="nav-link">
+                    <li class="nav-link-parent">
+                        <div class="item">
+                            <i class="icon-left fa-solid fa-chart-line"></i>
+                            <a href="#">Thống kê</a>
+                        </div>
+                        <i class="dropdown fa-solid fa-caret-down" href=""></i>
+                    </li>
+
+                    <ul class="nav-link-show ">
+                        <li class="nav-link-show-item">
+                            <i class="a fa-solid "></i>
+                            <a class="content" href="/admin/statistics">Doanh thu</a>
+                        </li>
+                        <li class="nav-link-show-item">
+                            <i class="fa-solid "></i>
+                            <a class="content" href="/admin/sales">Doanh số</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-link">
+                    <li class="nav-link-parent">
+                        <div class="item">
+                            <i class="icon-left fa-solid fa-newspaper"></i>
+                            <a href="#">Tin tức </a>
+                        </div>
+                        <i class="dropdown fa-solid fa-caret-down"></i>
+                    </li>
+                    <ul class="nav-link-show">
+                        <li class="nav-link-show-item">
+                            <i class="fa-solid "></i>
+                            <a class="content" href="/admin/list-news">Xem tin tức</a>
+                        </li>
+                        <li class="nav-link-show-item">
+                            <i class="fa-solid "></i>
+                            <a class="content" href="/admin/create-news">Tạo tin tức</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-link">
+                    <li class="nav-link-parent">
+                        <div class="item">
+                            <i class="icon-left fa-sharp fa-solid fa-user" style="font-size: 1.5rem;"></i>
+                            <a href="#">Tài khoản</a>
+                        </div>
+                        <i class="dropdown fa-solid fa-caret-down" style="font-size: 1.5rem;"></i>
+                    </li>
+
+                    <ul class="nav-link-show">
+                        <li class="nav-link-show-item">
+                            <i class="fa-solid "></i>
+                            <a class="content" href="/admin/list-cus">Xem tài khoản</a>
+                        </li>
+                        <li class="nav-link-show-item">
+                            <i class="fa-solid "></i>
+                            <a class="content" href="/admin/delete-cus">Xóa tài khoản</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-link">
+                    <li class="nav-link-parent">
+                        <div class="item">
+                            <i class="icon-left fa-regular fa-calendar-days" style="font-size: 1.5rem;"></i>
+                            <a href="#">Lịch trình</a>
+                        </div>
+                        <i class="dropdown fa-solid fa-caret-down"></i>
+                    </li>
+
+                    <ul class="nav-link-show">
+                        <li class="nav-link-show-item">
+                            <i class="fa-solid "></i>
+                            <a class="content" href="/admin/list-schedule">Xem lịch trình</a>
+                        </li>
+                        <li class="nav-link-show-item">
+                            <i class="fa-solid "></i>
+                            <a class="content" href="/admin/create-schedule">Tạo lịch trình</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-link">
+                    <li class="nav-link-parent">
+                        <div class="item">
+                            <i class="icon-left fa-solid fa-bus-simple"></i>
+                            <a href="#">Xe khách</a>
+                        </div>
+                        <i class="dropdown fa-solid fa-caret-down" href=""></i>
+                    </li>
+
+                    <ul class="nav-link-show ">
+                        <li class="nav-link-show-item">
+                            <i class="a fa-solid "></i>
+                            <a class="content" href="/admin/list-coach">Xem xe khách</a>
+                        </li>
+                        <li class="nav-link-show-item">
+                            <i class="fa-solid "></i>
+                            <a class="content" href="/admin/create-coach">Thêm xe khách</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-link">
+                    <li class="nav-link-parent">
+                        <div class="item">
+                            <i class="icon-left fa-solid fa-road" style="padding-right: 1.5rem;"></i>
+                            <a href="#">Tuyến xe</a>
+                        </div>
+                        <i class="dropdown fa-solid fa-caret-down" href=""></i>
+                    </li>
+
+                    <ul class="nav-link-show ">
+                        <li class="nav-link-show-item">
+                            <i class="a fa-solid "></i>
+                            <a class="content" href="/admin/list-route">Xem tuyến xe</a>
+                        </li>
+                        <li class="nav-link-show-item">
+                            <i class="fa-solid "></i>
+                            <a class="content" href="/admin/create-route">Thêm tuyến xe</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-link">
+                    <li class="nav-link-parent">
+                        <div class="item">
+                            <i class="icon-left fa-solid fa-archway"></i>
+                            <a href="#">Bến xe</a>
+                        </div>
+                        <i class="dropdown fa-solid fa-caret-down" href=""></i>
+                    </li>
+
+                    <ul class="nav-link-show ">
+                        <li class="nav-link-show-item">
+                            <i class="a fa-solid "></i>
+                            <a class="content" href="/admin/list-station">Xem bến xe</a>
+                        </li>
+                        <li class="nav-link-show-item">
+                            <i class="fa-solid "></i>
+                            <a class="content" href="/admin/create-station">Thêm bến xe</a>
+                        </li>
+                    </ul>
+                </div>
+            </ul>
+        </div>
+
+        <!-- <div class="grid"> -->
+        <div class="container-admin">
+            <div class="title-admin">
+                <i class="fa-solid fa-circle-plus title-icon create-icon"></i>
+                <div class="title-content">THÊM XE KHÁCH</div>
+            </div>
+
+            <div class="title-line"></div>
+
+
+            <div class="container-create__coach">
+                <form method="POST" action="/admin/create-coach/create" id="create-form__coach" class="form">
+                    <div class="message-error" style="margin-top: 1rem;">
+                        <p>{{messageError}}</p>
+                    </div>
+                    <div class="form-group width-item-80">
+                        <label for="id-coach" class="form-label form-coach">ID :</label>
+                        <input id="id-coach" name="id-coach" type="text" class="form-control-coach"
+                            style="border-radius: 0;" value="{{idCoach}}" disabled>
+                    </div>
+                    <div class="form-group width-item-80">
+                        <label for="route" class="form-label form-coach">Tuyến <span class="asterisk">*</span>:</label>
+                        <select id="route" name="route" class="form-control-coach" rules="required|select">
+                            <option value="0" style="display: none;">Chọn tuyến</option>
+                            {{#each routes}}
+                            <option value="{{this.idRoute}}">{{this.firstProvince}} - {{this.secondProvince}}</option>
+                            {{/each}}
+                        </select>
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-group width-item-80">
+                        <label for="type-coach" class="form-label form-coach">Loại xe <span
+                                class="asterisk">*</span>:</label>
+                        <select id="type-coach" name="type-coach" class="form-control-coach" rules="required|select">
+                            <option value="0" style="display: none;">Chọn loại xe</option>
+                            {{#each types}}
+                            <option value="{{this.idType}}">{{this.typeName}}</option>
+                            {{/each}}
+                        </select>
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-group width-item-80">
+                        <label for="license-plate" class="form-label form-coach">Biển số xe <span
+                                class="asterisk">*</span>:</label>
+                        <input id="license-plate" name="license-plate" type="text" class="form-control-coach"
+                            rules="required|nospace">
+                        <span class="form-message"></span>
+                    </div>
+
+                    <div class="sub-info__coach">
+                        <div class="number-seat">Số lượng: ... ghế</div>
+                    </div>
+                    <div class="container-submit">
+                        <button class="form-submit">
+                            <span>Upload</span>
+                            <i class="fa-solid fa-upload"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- </div> -->
+    </div>
+
+
+</div>
+
+{{#if success}}
+<div id="toast">
+    <div class="toast toast--success">
+        <div class="toast__icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        <div class="toast__body">
+            <h3 class="toast__title">Success</h3>
+            <p class="toast__msg">{{success}}</p>
+        </div>
+        <div class="toast__close">
+            <i class="fas fa-times"></i>
+        </div>
+    </div>
+</div>
+{{/if}}
+
+{{#if failure}}
+<div id="toast">
+    <div class="toast toast--error">
+        <div class="toast__icon">
+            <i class="fas fa-exclamation-circle"></i>
+        </div>
+        <div class="toast__body">
+            <h3 class="toast__title">Failed</h3>
+            <p class="toast__msg">{{failure}}</p>
+        </div>
+        <div class="toast__close">
+            <i class="fas fa-times"></i>
+        </div>
+    </div>
+</div>
+{{/if}}
+
+<a class="changeLink"></a>
+<script>
+    var navLinkParents = document.querySelectorAll(".nav-link-parent");
+    var aLink = document.querySelector('.changeLink');
+    var message = document.querySelector('.message-error');
+    navLinkParents.forEach((navLinkParent) => {
+        var dropdownIcon = navLinkParent.querySelector(".dropdown");
+        navLinkParent.addEventListener("click", (event) => {
+            event.stopPropagation();
+            var navLinkShow = navLinkParent.nextElementSibling;
+            navLinkShow.classList.toggle("active");
+            dropdownIcon.classList.toggle("fa-caret-down");
+            dropdownIcon.classList.toggle("fa-caret-up");
+        });
+    });
+
+    var item = document.querySelectorAll(".nav-link-show-item");
+    item.forEach((a) => {
+        var b = a.querySelector("i");
+        a.addEventListener("click", () => {
+            b.classList.toggle("fa-caret-right");
+        })
+    })
+</script>
+<script>
+    var cbb__Type = document.querySelector('#type-coach');
+    console.log(cbb__Type);
+    cbb__Type.onchange = function () {
+        fetch__NumberOfSeat();
+    }
+    function fetch__NumberOfSeat() {
+        const url = `/admin/create-coach/getNumberSeat?type=${cbb__Type.value}`;
+        fetch(url)
+            .then(function (response) {
+                return response.json()
+            })
+            .then(function (data) {
+                console.log(data);
+                var type = Object.getOwnPropertyNames(data);
+                var thirdAttr = type[2];
+                var numberSeatElement = document.querySelector('.number-seat');
+                numberSeatElement.innerHTML = `Số lượng: ${data[thirdAttr]} ghế`;
+            })
+            .catch(function (err) {
+                console.error(err);
+            })
+
+    }
+</script>
+<script>
+    function displayTime() {
+        var date = new Date();
+        var hour = date.getHours();
+        var minute = date.getMinutes();
+        var second = date.getSeconds();
+        var day = date.getDate();
+        var month = date.getMonth() + 1;
+        var year = date.getFullYear();
+        var meridiem = hour >= 12 ? "PM" : "AM";
+
+        day = addZero(day);
+        month = addZero(month);
+        hour = hour % 12;
+        hour = hour ? hour : 12;
+        minute = addZero(minute);
+        second = addZero(second);
+
+        document.getElementById("clock").innerHTML = hour + ":" + minute + ":" + second + " " + meridiem;
+        document.getElementById("date").innerHTML = day + "/" + month + "/" + year;
+
+        setTimeout(displayTime, 1000);
+    }
+
+    function addZero(num) {
+        return num < 10 ? "0" + num : num;
+    }
+
+    displayTime();
+</script>

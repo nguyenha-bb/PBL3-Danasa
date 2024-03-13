@@ -1,0 +1,53 @@
+.content-route{
+    padding: 2rem 3rem 2rem 4rem;
+}
+
+.content-xem-tuyen-xe .route-name {
+    width: 40%;
+    font-size: 1.4rem;
+}
+
+.content-xem-tuyen-xe .route-distance {
+    width: 22%;
+    font-size: 1.4rem;
+}
+
+.content-xem-tuyen-xe .route-duration {
+    width: 22%;
+    font-size: 1.4rem;
+}
+
+.content-xem-tuyen-xe .route-icons {
+    width: 10%;
+}
+
+.list-route .route {
+    justify-content: space-between;
+    text-align: center;
+    background-color: #fff;
+    margin: 1.1rem 0;
+    max-height: 4rem;
+    font-size: 13px;
+}
+
+.route-name__desc {
+    width: 40%;
+}
+
+.route-distance__desc {
+    width: 22%;
+}
+
+.route-duration__desc {
+    width: 22%;
+}
+
+.route-icon-detail {
+    width: 10%;
+    display: flex;
+}
+
+.route-icon-detail .icon-delete {
+    margin-right: 0.2rem;
+}
+

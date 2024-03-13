@@ -1,0 +1,254 @@
+<div class="app" style="background-color: #F5F5F5;">
+
+    <header class="header">
+        <div class="grid">
+            <nav class="header__navbar">
+                <ul class="header__navbar-list-left">
+                    <li class="header__navbar-item">
+                        <a href="./" class="header__navbar-item-link">DANASA
+                        </a>
+                    </li>
+                    <div class="pentagon"></div>
+                </ul>
+
+                <ul class="header__navbar-list-right">
+                    <li class="header__navbar-item">
+                        <a href="/" class="header__navbar-item-link">Trang chủ</a>
+                    </li>
+                    <li class="header__navbar-item">
+                        <a href="/news" class="header__navbar-item-link">Tin tức</a>
+                    </li>
+                    <li class="header__navbar-item">
+                        <a href="/contact" class="header__navbar-item-link">Liên hệ</a>
+                    </li>
+                    <li class="header__navbar-item header__navbar-item-dropdown">
+                        <a href="/login" class="header__navbar-item-link link-name">{{infoLogin}}</a>
+                        <div class="menu-show-container" id="dropdown">
+                            <div class="user">
+                                <i class="fa-solid fa-circle-user"></i>
+                                <h3>{{isLoggedIn}}</h3>
+                            </div>
+                            <div class="button">
+                                <ul>
+                                    <li class="li-dropdown">
+                                        <i class="fa-solid fa-clock-rotate-left" style="color:var(--text-color)"></i>
+                                        <span>
+                                            <a class="itemm" href="/history-buy-ticket" >
+                                                Lịch sử đặt vé
+                                            </a>
+                                        </span>
+                                    </li>
+                                    <li class="li-dropdown">
+                                        <i class="fa-solid fa-user-large" style="color:var(--text-color)"></i>
+                                        <span><a href="/updateinfo" >
+                                                Thông tin cá nhân
+                                            </a></span>
+                                    </li>
+                                    <li class="li-dropdown">
+                                        <i class="fa-solid fa-user-pen" style="color:var(--text-color)"></i>
+                                        <span><a href="/change-password" >
+                                                Thay đổi mật khẩu
+                                            </a></span>
+                                    </li>
+                                    <li class="li-dropdown">
+                                        <i class="fa-solid fa-right-from-bracket" style="color:var(--text-color)"></i>
+                                        <span><a href="/login/logout" >
+                                                Đăng xuất
+                                            </a></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <script>
+        const dropdown = document.getElementById("dropdown");
+        const infoLogin = "{{infoLogin}}";
+        if (infoLogin === "Đăng nhập") {
+            dropdown.style.display = "none";
+        }
+    </script>
+
+    <div class="container__ticketConfirm-3">
+        <div class="grid">
+            <div class="nav-bar-step">
+                <div class="container__content">
+                    <div class="container__content-nameStep">
+                        <h2>THANH TOÁN</h2>
+                    </div>
+                </div>
+                <div class="container__content-lineStep">
+                    <div class="steps-line">
+                        <div class="step-circle">
+                            <div class="step-circle-first">
+                                <div class="text">1</div>
+                                <div class="title-active">
+                                    <span id="step-1">
+                                        Chọn tuyến
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="steps-line">
+                        <div class="step-circle">
+                            <div class="step-circle-second">
+                                <div class="text">2</div>
+                                <div class="title-active">
+                                    <span id="step-1">
+                                        Xác nhận lộ trình
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="steps-line">
+                        <div class="step-circle">
+                            <div class="step-circle-third">
+                                <div class="text">3</div>
+                                <div class="title-active">
+                                    <span id="step-2">
+                                        Thông tin hành khách
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="steps-line">
+                        <div class="step-circle">
+                            <div class="step-circle-fourth" style="background-color: #4B8EFA;">
+                                <div class="text" style="color: #fff">4</div>
+                                <div class="title-active" style="color: #000;">
+                                    <span id="step-1">
+                                        Thanh toán
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="container__content-lineStraight-3">
+                    <div class="step-line step-line-third"></div>
+                </div>
+            </div>
+            <div class="buy-ticket-step3">
+                <div class="table-info" style="padding: 2rem 3rem;">
+                    <div class="message-confirm" style="font-size: 1.8rem; color: red; margin-bottom: 1.5rem">Đặt vé
+                        thành công!</div>
+                    <div class="info-charge" style="font-size: 1.6rem; font-style:italic;">Quý khách vui lòng kiểm tra gmail để nắm rõ thông tin đặt vé cũng như thanh toán
+                        tiền mặt đầy đủ tại nhà xe!</div>
+                </div>
+                <div class="but grid-full-col font-14">
+                    <button class="back" style="cursor: pointer;">TRỞ VỀ TRANG CHỦ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="grid">
+            <div class="grid__row-footer">
+                <div class="col grid__column-intro">
+                    <div class="col__column-inner">
+                        <img width="220" height="150" src="../img/footer_danasa.png"
+                            class="attachment-original size-original" alt="">
+                        <div class="icon-box-text last-reset">
+                            <p style="width: 60%; text-align-last: center;">Công ty cổ phần xe khách Danasa Bus
+                                Lines</p>
+                        </div>
+
+                        <div class="social-icons follow-icons">
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col grid__column-lienhe">
+                    <div class="col-inner">
+                        <h3 style="padding-right: -20px;width: 250px;">THÔNG TIN LIÊN HỆ</h3>
+                        <div class="icon-box icon-box-left text-left">
+                            <div class="icon-box-img" style="width: 100%">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <div class="icon-box-text last-reset">
+                                    <p style="width: 90%; ">54 Nguyễn Lương Bằng, Hòa Khánh Bắc,
+                                        Liên Chiểu, Đà Nẵng </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="icon-box icon-box-left text-left">
+                            <div class="icon-box-img" style="width: 70%">
+                                <i class="fa-solid fa-phone" style="font-size: 17px;"></i>
+                                <div class="icon-box-text last-reset">
+                                    <p>076 922 0162</p>
+                                </div>
+                            </div>
+
+                            <div class="icon-box icon-box-left text-left">
+                                <div class="icon-box-img" style="width: 70%">
+                                    <i class="fa-solid fa-envelopes-bulk" style="font-size: 17px;"></i>
+                                    <div class="icon-box-text last-reset">
+                                        <p>danasacoach79@gmail.com</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col grid__column-hinhanh">
+                    <div class="col-inner">
+                        <h3>HÌNH ẢNH</h3>
+                        <div class="grid__row-3-col-3">
+                            <div class="galary-col col">
+                                <div class="container">
+                                    <img src="../img/xe_do.jpg" alt="Xe đỏ">
+                                    <img src="../img/xe_xanh2.jpg" alt="Xe đỏ">
+                                </div>
+                                <div class="container">
+                                    <img src="../img/xe_xanh1.jpg" alt="Xe đỏ">
+                                    <img src="../img/xe_do2.jpg" alt="Xe đỏ">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col grid__column-dangky">
+                    <div class="col-inner">
+                        <h3 style="width: 250px;">HỢP TÁC VÀ LIÊN KẾT</h3>
+                        <p style="font-size: 1.2rem;">Quy chế hoạt động Sàn GDTMĐT</p>
+                        <p style="font-size: 1.2rem;">Bến xe Trung tâm Đà Nẵng</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="line-straight-footer"></div>
+    </footer>
+</div>
+
+<script>
+    const linkName = document.querySelector('.link-name');
+    if (linkName.innerHTML !== "Đăng nhập") {
+        linkName.href = "#";
+    }
+</script>
+
+<script>
+    const backBtn = document.querySelector('.back');
+
+    backBtn.onclick = function() {
+        location.href = "/";
+    }
+</script>

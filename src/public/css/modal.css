@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box
+}
+
+.clearfix button {
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.875;
+}
+
+.clearfix button:hover {
+  opacity: 1;
+}
+
+.clearfix .cancelbtn,
+.clearfix .okbtn {
+  float: left;
+  width: 50%;
+  font-size: 1.4rem;
+}
+
+.clearfix .cancelbtn {
+  background-color: #ccc;
+  color: black;
+}
+
+.clearfix .okbtn {
+  background-color: #1D38A1;
+}
+
+.modal-content .container-modal {
+  padding: 16px;
+  text-align: center;
+  border: solid white;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  padding-top: 50px;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  border: 1px solid #888;
+  width: 40%;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #1D38A1;
+  cursor: pointer;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@media screen and (max-width: 300px) {
+  .cancelbtn,
+  .okbtn {
+    width: 100%;
+  }
+}
+
+.clearfix {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+.container-modal h1 {
+  font-size: 3em; 
+  margin: 1em 0; 
+  color: #1D38A1
+}
+
+.container-modal p{
+  font-size: 1.5rem; 
+  color: #1D38A1
+}

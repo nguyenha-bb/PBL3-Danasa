@@ -1,0 +1,130 @@
+.container-TK-doanh-so,
+.container-TK-doanh-thu{
+    background-color: #fff;
+    margin-left: 5rem;
+    width: 70%;
+}
+.frame{
+    margin:0 7rem;
+}
+.frame .title-obj-TK{
+    color: #1D38A1;
+}
+.line2{
+    width: 32rem;
+    height: 0.3rem;
+    background-color: var(--blue-color);
+}
+.title-obj-TK .title-icon{
+    width: 3rem;
+    margin-right: 0.5rem;
+}
+.title-obj-TK .text-title{
+    font-weight: bold;
+    font-size: 20px;
+    margin: 3rem 0 1rem;
+}
+.title-obj-TK .line2{
+    width: 16rem;
+    height: 0.2rem;
+    background-color: #1D38A1;
+}
+.content-TK{
+    margin: 3rem 0rem;
+}
+.inline{
+    display: flex;
+    flex-direction: row;
+}
+.content-TK .table-line{
+    justify-content: space-between;
+    margin: 3rem 0;
+}
+.table-line .tk{
+    width: 48%;
+    border-radius: 10px;
+    height: 17rem;
+    /* min-height: 18rem; */
+    /* margin: auto 0; */
+}
+.table-TK .sum{
+    background-color: #2E69C7;
+    align-self: center;
+}
+.table-TK .year{
+    background-color: #2D9DEC;
+}
+.table-TK .three-month{
+    background-color: #19B9D5;
+}
+.table-TK .month{
+    background-color: #72C7EC;
+}
+.table-TK .high{
+    background-color: #19B9D5;
+}
+.table-line .low{
+    background-color: #19B9D5;
+}
+.tk{
+    padding-left: 2rem;
+    padding-top: 1.5rem;
+}
+.tk .ticket,
+.tk .money{
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+.tk .title-tk{
+    color: #fff;
+    font-size: 16px;
+}
+.tk .trend{
+    margin-top: -1rem;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+.trend .icon{
+    align-self: center;
+    /* margin-right: 1rem; */
+}
+.tk .name-route{
+    color: #fff;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 15px;
+}
+.table-TK .tk-detail{
+    position: relative;
+}
+.tk-detail .detail{
+    position: absolute;
+    right: 2rem;
+    bottom: 1.5rem;
+    color: #fff;
+    font-size: 15px;
+}
+
+.tk-detail .detail:hover{
+    opacity: 0.8;
+}
+
+.img-doanh-thu{
+    text-align: center;
+}
+.img-doanh-thu img{
+    width: 70%;
+}
+.img-doanh-so{
+    margin: 7rem 0;
+    text-align: center;
+}
+.img-doanh-so .img-ticket{
+    width: 50%;
+}
+
+.page-item .disabled i {
+    pointer-events: none;
+    opacity: 0.5; 
+  }

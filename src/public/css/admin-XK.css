@@ -1,0 +1,18 @@
+.form-control-coach{
+    height: 4rem;
+    border-radius: 15px;
+    padding-left: 2rem;
+}
+.form-coach{
+    margin: 1rem 0;
+}
+.container-delete__coach .width-item-80 select,
+.container-delete__coach .width-item-80 input,
+.container-create__coach .width-item-80 select,
+.container-create__coach .width-item-80 input{
+    background-color: #DDE4FF;
+    width: 80%;
+    border: none;
+    font-size: 14px;
+    outline: none;
+}

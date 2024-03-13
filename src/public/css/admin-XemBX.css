@@ -1,0 +1,68 @@
+.content-station{
+    padding: 2rem 3rem 2rem 4rem;
+}
+
+.line-straight-xemBX{
+    height: 2px;
+    background: #1d38a1;
+    width: 14rem;
+    margin-top: -5px;
+}
+
+.content-xem-ben-xe .station-name {
+    width: 40%;
+    font-size: 1.4rem;
+}
+
+.content-xem-ben-xe .province-name {
+    width: 40%;
+    font-size: 1.4rem;
+}
+
+
+.content-xem-ben-xe .station-icons {
+    width: 10%;
+}
+
+.list-station .station {
+    justify-content: space-between;
+    text-align: center;
+    background-color: #fff;
+    margin: 1.1rem 0;
+    max-height: 4rem;
+    font-size: 13px;
+}
+
+.province-name__desc {
+    width: 40%;
+}
+
+.station-name__desc {
+    width: 40%;
+}
+
+.station-icon-detail {
+    width: 10%;
+    display: flex;
+}
+
+.station-icon-detail .icon-delete {
+    margin-right: 0.2rem;
+}
+
+.filter-province{
+    padding-bottom: 2rem;
+}
+
+.filter-province .cbb-admin{
+    height: 4rem;
+    border-radius: 2rem;
+    font-size: 1.4rem;
+    padding: 0 2rem;
+    border-color: #F5F5F5;
+}
+
+.delete-icon{
+    font-size: 1.7rem;
+    color: #1D38A1;
+}

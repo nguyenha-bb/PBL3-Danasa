@@ -1,0 +1,294 @@
+// .app {
+//     height: 140rem;
+//     background-color: #f5f5f5;
+// }
+
+.step-circle-second {
+    width: 4rem;
+    height: 4rem;
+    border: 2px solid #4B8EFA;
+    background-color: #4B8EFA;
+    border-radius: 2rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.step-circle-third {
+    width: 4rem;
+    height: 4rem;
+    border: 2px solid #4B8EFA;
+    background-color: var(--white-color);
+    border-radius: 2rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.step-circle-second .text {
+    color: var(--white-color);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.step-circle-third .text  {
+    color: #4B8EFA;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.step-line-first {
+    max-width: 65%;
+}
+
+.container__seat {
+    margin-top: 2rem;
+    border-color: #ccc;
+    border-width: 0.1rem;
+    border-style: solid;
+    padding: 4rem 8rem;
+    border-radius: 3%;
+    background-color: #fff;
+}
+
+.container__seat.type-normal {
+    display: none;
+}
+
+/* .container__seat.other-type {
+    display: none;
+} */
+
+.container__seat-content {
+    border: 0.1rem solid #ccc;
+    border-radius: 3%;
+    padding-bottom: 0.5rem;
+}
+
+.container__seat-heading {
+    display: flex;
+    border-bottom: 0.1rem solid #ccc;
+}
+
+.container__seat-heading .seat-heading {
+    padding: 1rem;
+    flex: 1;
+    text-align:center;
+    font-size: 1.4rem;
+}
+
+.container__seat-list {
+    display: flex;
+    background-color: #F1EDED;
+}
+
+.container__seat-list .container__seat-number {
+    flex: 1;
+    display: flex;
+    padding: 1rem 2rem;
+    justify-content: space-around;
+}
+
+.seat-info + .seat-info {
+    margin-top: 1rem;
+}
+
+.seat-info {
+    position: relative;
+}
+
+.seat-info .seat-desc {
+    position: absolute;
+    color: #000;
+    top: 0.5rem;
+    left: 1.4rem;
+    font-size: 0.95em;
+    font-weight: bold;
+}
+
+.seat-info i {
+    color:#ced1d2;
+    font-size: 3.5rem;
+}
+
+.seat-info.chosen i {
+    color: #eb6a6a;
+}
+
+.seat-info.empty i {
+    color: #7aabfa;
+}
+
+.container__seat-status {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.6rem 10rem;
+    background-color: #F1EDED;
+}
+
+.container__seat-status .status-seat {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.container__seat-status .status-seat .status-box {
+    width: 1.9rem;
+    height: 1.9rem;
+    background-color: #000;
+    border-radius: 30%;
+    margin-right: 0.7rem;
+    border-width: 0.15rem;
+    border-style: solid;
+}
+
+.container__seat-status .status-seat .status-note {
+    line-height: 2rem;
+}
+
+.status-seat.status-empty .status-box {
+    border-color: rgb(46, 114, 223);
+    background-color: #7aabfa;
+}
+
+.status-seat.status-booked .status-box {
+    border-color: #a4a6a7;
+    background-color: #ced1d2;
+}
+
+.status-seat.status-chosen .status-box {
+    border-color: #c92d2d;
+    background-color: #e37373;
+}
+
+.container_info-ticket {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 1.5rem;
+}
+
+.container_info-ticket .info-ticket__number {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.container_info-ticket .info-ticket__price {
+    display: flex;
+}
+
+.info-ticket__price .price-desc{
+    font-size: 1.55rem;
+}
+
+.info-ticket__price .price-ticket{
+    font-size: 1.55rem;
+    font-weight: bold;
+}
+
+.container__info-body {
+    margin-top: 4rem;
+    display: flex;
+}
+
+.container__info-body .container__info-customer {
+    flex : 1.1;
+    background-color: #F1EDED;
+    border-radius: 5%;
+}
+
+.container__info-body .container__info-policy {
+    flex : 1;
+    border-radius: 5%;
+    -webkit-box-shadow: 0 0 0.2rem #a4a3a3;
+    box-shadow: 0 0 0.2rem #a4a3a3;
+    height: 30rem;
+    padding: 0 3rem;
+    margin-left: 2rem;
+    background-color: #fff;
+}
+
+.container__info-customer .form__heading {
+    font-size: 1.7rem;
+    font-weight: 600;
+    text-align: center;
+    color:#4B8EFA;
+    margin-bottom: 2.5rem;
+}
+
+.container__info-customer .form {
+    padding: 4rem 3rem 0;
+}
+
+.form-group--large {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-group--large .form-group {
+    width: 48%;
+}
+
+.form-group.form-checkbox {
+    display: flex;
+}
+
+.form-group > input#policy-rule {
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+.form-group label.policy-rule {
+    position: relative;
+    top: -1.6rem;
+    left: 2.6rem;
+    font-size: 1.2rem;
+}
+
+.form-group span.policy-rule {
+    position: relative;
+    top: -1rem;
+    left: 2.6rem;
+    font-size: 1.25rem;
+}
+
+.container__info-policy .policy-heading {
+    font-size: 1.7rem;
+    font-weight: 600;
+    text-align: center;
+    color:#4B8EFA;
+    margin-bottom: 2.6rem;
+    margin-top: 3.7rem;
+}
+
+.container__info-policy .policy-detail {
+    font-size: 1.25rem;
+}
+
+.container__ticketConfirm .but{
+    margin-top: 3rem;
+    justify-content: center;
+}
+.container__ticketConfirm .but .back{
+    border-radius: 50px;
+    width: 25rem;
+    height: 5rem;
+    background-color: #FFFFFF;
+    border: none;
+    margin-right: 2rem;
+}
+.container__ticketConfirm .but .confirm{
+    border-radius: 50px;
+    width: 25rem;
+    height: 5rem;
+    background-color: #4B8EFA;
+    color: #FFFFFF;
+    border: none;
+    margin-left: 2rem;
+}
+
+.grid-full-col{
+    display: flex;
+    flex-direction: row;
+}
+

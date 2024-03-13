@@ -1,0 +1,417 @@
+<header class="header-admin">
+    <div class="grid">
+        <nav class="header__navbar-admin">
+            <div class="header__navbar-left-admin">
+                <div class="header__navbar-list-left-admin">
+                    <div class="pentagon-admin"></div>
+                    <div class="header__navbar-item-admin">
+                        <a href="/admin/statistics" class="header__navbar-item-link-admin">DANASA</a>
+                    </div>
+                </div>
+            </div>
+            <div class="header__navbar-right-admin">
+                <div class="search-field">
+                    <i class="fa-solid fa-clock" style="font-size: 2rem; padding-right: 1rem;"></i>
+                    <span id="date"></span>
+                    <span id="clock"></span>
+                </div>
+
+
+                <div class="header__navbar-right-2">
+                    <div class="nav-item">
+                        <div class="dropdown">
+                            <button type="button"
+                                class="nav-link count-indicator dropdown-toggle btn btn-primary-notifi"
+                                fdprocessedid="6335cp" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa-solid fa-hands-clapping"
+                                    style="font-size: 2.2rem; color: #2a4e8a; margin-right: -0.8rem;"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    {{!-- <div class="nav-item">
+                        <div class="dropdown">
+                            <button type="button" class="nav-link count-indicator dropdown-toggle btn btn-primary-mess"
+                                fdprocessedid="6335cp" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa-solid fa-envelope"></i>
+                                <span class="count-symbol bg-warning" style="font-size: 1.25rem;"></span>
+                            </button>
+                        </div>
+                    </div> --}}
+
+                    <div class="nav-item nav-profile">
+                        <div class="dropdown">
+                            <button type="button" class="nav-link dropdown-toggle btn btn-primary" style="position: relative;
+                                padding: 3rem 0;" aria-haspopup="true" aria-expanded="false">
+                                <div class="nav-profile-text">
+                                    <p class="mb-1 text-black">Xin chào Admin!</p>
+                                </div>
+                            </button>
+                            <button class="logout-admin">
+                                <a href="/login/logout" class="nav-profile-img">
+                                    <i class="fa-solid fa-right-from-bracket"
+                                        style="font-size: 2rem; color: #2a4e8a;"></i>
+                                    <span class="availability-status online"></span>
+                                </a>
+                            </button>
+                            <div class="show-drop-down"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+<div class="container-page-admin-wrap">
+    <div class="grid" style="display: flex;">
+        <div class="sidebar">
+            <ul>
+                <div class="nav-link">
+                    <li class="nav-link-parent">
+                        <div class="item">
+                            <i class="icon-left fa-solid fa-chart-line"></i>
+                            <a href="#">Thống kê</a>
+                        </div>
+                        <i class="dropdown fa-solid fa-caret-down" href=""></i>
+                    </li>
+
+                    <ul class="nav-link-show ">
+                        <li class="nav-link-show-item">
+                            <i class="a fa-solid "></i>
+                            <a class="content" href="/admin/statistics">Doanh thu</a>
+                        </li>
+                        <li class="nav-link-show-item">
+                            <i class="fa-solid "></i>
+                            <a class="content" href="/admin/sales">Doanh số</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-link">
+                    <li class="nav-link-parent">
+                        <div class="item">
+                            <i class="icon-left fa-solid fa-newspaper"></i>
+                            <a href="#">Tin tức </a>
+                        </div>
+                        <i class="dropdown fa-solid fa-caret-down"></i>
+                    </li>
+                    <ul class="nav-link-show">
+                        <li class="nav-link-show-item">
+                            <i class="fa-solid "></i>
+                            <a class="content" href="/admin/list-news">Xem tin tức</a>
+                        </li>
+                        <li class="nav-link-show-item">
+                            <i class="fa-solid "></i>
+                            <a class="content" href="/admin/create-news">Tạo tin tức</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-link">
+                    <li class="nav-link-parent">
+                        <div class="item">
+                            <i class="icon-left fa-sharp fa-solid fa-user" style="font-size: 1.5rem;"></i>
+                            <a href="#">Tài khoản</a>
+                        </div>
+                        <i class="dropdown fa-solid fa-caret-down"></i>
+                    </li>
+
+                    <ul class="nav-link-show">
+                        <li class="nav-link-show-item">
+                            <i class="fa-solid "></i>
+                            <a class="content" href="/admin/list-cus">Xem tài khoản</a>
+                        </li>
+                        <li class="nav-link-show-item">
+                            <i class="fa-solid "></i>
+                            <a class="content" href="/admin/delete-cus">Xóa tài khoản</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-link">
+                    <li class="nav-link-parent">
+                        <div class="item">
+                            <i class="icon-left fa-regular fa-calendar-days" style="font-size: 1.5rem;"></i>
+                            <a href="#">Lịch trình</a>
+                        </div>
+                        <i class="dropdown fa-solid fa-caret-down"></i>
+                    </li>
+
+                    <ul class="nav-link-show">
+                        <li class="nav-link-show-item">
+                            <i class="fa-solid "></i>
+                            <a class="content" href="/admin/list-schedule">Xem lịch trình</a>
+                        </li>
+                        <li class="nav-link-show-item">
+                            <i class="fa-solid "></i>
+                            <a class="content" href="/admin/create-schedule">Tạo lịch trình</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-link">
+                    <li class="nav-link-parent">
+                        <div class="item">
+                            <i class="icon-left fa-solid fa-bus-simple"></i>
+                            <a href="#">Xe khách</a>
+                        </div>
+                        <i class="dropdown fa-solid fa-caret-down" href=""></i>
+                    </li>
+
+                    <ul class="nav-link-show ">
+                        <li class="nav-link-show-item">
+                            <i class="a fa-solid "></i>
+                            <a class="content" href="/admin/list-coach">Xem xe khách</a>
+                        </li>
+                        <li class="nav-link-show-item">
+                            <i class="fa-solid "></i>
+                            <a class="content" href="/admin/create-coach">Thêm xe khách</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-link">
+                    <li class="nav-link-parent">
+                        <div class="item">
+                            <i class="icon-left fa-solid fa-road" style="padding-right: 1.5rem;"></i>
+                            <a href="#">Tuyến xe</a>
+                        </div>
+                        <i class="dropdown fa-solid fa-caret-down" href=""></i>
+                    </li>
+
+                    <ul class="nav-link-show ">
+                        <li class="nav-link-show-item">
+                            <i class="a fa-solid "></i>
+                            <a class="content" href="/admin/list-route">Xem tuyến xe</a>
+                        </li>
+                        <li class="nav-link-show-item">
+                            <i class="fa-solid "></i>
+                            <a class="content" href="/admin/create-route">Thêm tuyến xe</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-link">
+                    <li class="nav-link-parent">
+                        <div class="item">
+                            <i class="icon-left fa-solid fa-archway"></i>
+                            <a href="#">Bến xe</a>
+                        </div>
+                        <i class="dropdown fa-solid fa-caret-down" href=""></i>
+                    </li>
+
+                    <ul class="nav-link-show ">
+                        <li class="nav-link-show-item">
+                            <i class="a fa-solid "></i>
+                            <a class="content" href="/admin/list-station">Xem bến xe</a>
+                        </li>
+                        <li class="nav-link-show-item">
+                            <i class="fa-solid "></i>
+                            <a class="content" href="/admin/create-station">Thêm bến xe</a>
+                        </li>
+                    </ul>
+                </div>
+            </ul>
+        </div>
+
+        <div class="container-content">
+            <div class="content-coach">
+                <div class="title" style="padding: 0 0 3rem 0">
+                    <div class="title-content">
+                        <i class="fa-solid fa-eye"></i>
+                        <h2>XEM XE KHÁCH</h2>
+                    </div>
+                    <div class="line-straight-xemXK"></div>
+                </div>
+                <div class="filter-coach">
+                    <select name="type-coach" id="" class="filter-coach__type-coach cbb-admin">
+                        <option value="0">-- Loại xe --</option>
+                        {{#each types}}
+                        <option value="{{this.idType}}">{{this.typeName}}</option>
+                        {{/each}}
+
+                    </select>
+                    <select name="route-active" id="" class="filter-coach__route-active cbb-admin">
+                        <option value="0">-- Tuyến --</option>
+                        {{#each routes}}
+                        <option value="{{this.idRoute}}">{{this.firstProvince}} - {{this.secondProvince}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+                <script>
+                    var cbb__typeCoach = document.querySelector('.filter-coach__type-coach');
+                    var cbb__route = document.querySelector('.filter-coach__route-active');
+                    cbb__route.value = {{ idRoute }};
+                    cbb__typeCoach.value = {{ idType }};
+                </script>
+
+                <div class="content-xem-xe-khach">
+                    <div class="table-attribute grid-full-col" style="justify-content: space-between;">
+                        <div class="license-plate">
+                            <p>Biển số xe</p>
+                        </div>
+                        <div class="type-coach">
+                            <p>Loại xe</p>
+                        </div>
+                        <div class="route-active">
+                            <p>Tuyến hoạt động</p>
+                            {{!-- style="width: 80%;height: 5rem;position: relative;top: 1.7rem;" --}}
+                        </div>
+                        <div class="number-seat-coach">
+                            <p>Số lượng ghế</p>
+                        </div>
+                        <div class="delete-coach">
+
+                        </div>
+                    </div>
+                    <div class="list-coach">
+                        {{#each coachs}}
+                        <div class="coach grid-full-col">
+                            <div class="coach__license-plate">
+                                <p>{{this.licensePlate}}</p>
+                            </div>
+                            <div class="coach__type">
+                                <p>{{this.typeName}}</p>
+                            </div>
+                            <div class="coach__route-active">
+                                <p>{{this.firstProvince}} - {{this.secondProvince}}</p>
+                            </div>
+                            <div class="coach__number-seat">
+                                <p>{{this.numberOfSeat}} ghế</p>
+                            </div>
+                            <div class="coach__delete-coach">
+                                <button class="button-delete" data-id="{{this.idCoach}}">
+                                    Xóa
+                                </button>
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
+                <div class="index">
+                    <ul class="page-index inline">
+                        <li class="page-item">
+                            {{#if prev}}
+                            <a href="/admin/list-coach?route={{idRoute}}&type={{idType}}&page={{prev}}"
+                                class="page-link arrow">
+                                <i class="fa-solid fa-arrow-left"></i>
+                            </a>
+                            {{else}}
+                            <a class="page-link arrow disabled" disabled>
+                                <i class="fa-solid fa-arrow-left"></i>
+                            </a>
+                            {{/if}}
+                        </li>
+                        <li class="page-item page-now">
+                            <a class="page-link disable-page">{{current}}</a>
+                        </li>
+                        <li class="page-item">
+                            {{#if next}}
+                            <a href="/admin/list-coach?route={{idRoute}}&type={{idType}}&page={{next}}"
+                                class="page-link arrow">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                            {{else}}
+                            <a class="page-link arrow disabled" disabled>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                            {{/if}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{#if success}}
+<div id="toast">
+    <div class="toast toast--success">
+        <div class="toast__icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        <div class="toast__body">
+            <h3 class="toast__title">Success</h3>
+            <p class="toast__msg">{{success}}</p>
+        </div>
+        <div class="toast__close">
+            <i class="fas fa-times"></i>
+        </div>
+    </div>
+</div>
+{{/if}}
+
+<a class="change-link"></a>
+<script>
+    var navLinkParents = document.querySelectorAll(".nav-link-parent");
+
+    navLinkParents.forEach((navLinkParent) => {
+        var dropdownIcon = navLinkParent.querySelector(".dropdown");
+        navLinkParent.addEventListener("click", (event) => {
+            event.stopPropagation();
+            var navLinkShow = navLinkParent.nextElementSibling;
+            navLinkShow.classList.toggle("active");
+            dropdownIcon.classList.toggle("fa-caret-down");
+            dropdownIcon.classList.toggle("fa-caret-up");
+        });
+    });
+
+    var item = document.querySelectorAll(".nav-link-show-item");
+    item.forEach((a) => {
+        var b = a.querySelector("i");
+        a.addEventListener("click", () => {
+            b.classList.toggle("fa-caret-right");
+        })
+    })
+    const btnDeletes = document.querySelectorAll('.button-delete');
+    btnDeletes.forEach(btnDelete => {
+        const idCoach = btnDelete.dataset.id;
+        btnDelete.onclick = function (e) {
+            location.href = `/admin/delete-coach/${idCoach}`;
+        }
+    })
+</script>
+<script>
+    var cbb__typeCoach = document.querySelector('.filter-coach__type-coach');
+    var cbb__route = document.querySelector('.filter-coach__route-active');
+    var link = document.querySelector('.change-link');
+    console.log(link);
+    cbb__route.onchange = function () {
+        link.href = `/admin/list-coach?route=${cbb__route.value}&type=${cbb__typeCoach.value}&page=1`;
+        link.click();
+    }
+    cbb__typeCoach.onchange = function () {
+        link.href = `/admin/list-coach?route=${cbb__route.value}&type=${cbb__typeCoach.value}&page=1`;
+        link.click();
+    }
+</script>
+
+<script>
+    function displayTime() {
+        var date = new Date();
+        var hour = date.getHours();
+        var minute = date.getMinutes();
+        var second = date.getSeconds();
+        var day = date.getDate();
+        var month = date.getMonth() + 1;
+        var year = date.getFullYear();
+        var meridiem = hour >= 12 ? "PM" : "AM";
+
+        day = addZero(day);
+        month = addZero(month);
+        hour = hour % 12;
+        hour = hour ? hour : 12;
+        minute = addZero(minute);
+        second = addZero(second);
+
+        document.getElementById("clock").innerHTML = hour + ":" + minute + ":" + second + " " + meridiem;
+        document.getElementById("date").innerHTML = day + "/" + month + "/" + year;
+
+        setTimeout(displayTime, 1000);
+    }
+
+    function addZero(num) {
+        return num < 10 ? "0" + num : num;
+    }
+
+    displayTime();
+</script>

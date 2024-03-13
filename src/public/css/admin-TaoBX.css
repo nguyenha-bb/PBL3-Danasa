@@ -1,0 +1,55 @@
+.container-delete__station .width-item-80 input,
+.container-create__station .width-item-80 input {
+    background-color: #DDE4FF;
+    width: 80%;
+    border: none;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-group--parent {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.station-item-input {
+    width: 47%;
+}
+
+.station-item-input input {
+    background-color: #DDE4FF;
+    border: none;
+    font-size: 14px;
+    outline: none;
+}
+
+select:focus {
+    outline: none;
+    border: none;
+}
+
+.form-control-station {
+    height: 4rem;
+    border-radius: 15px;
+    padding-left: 2rem;
+}
+
+.container-create__station .width-item-80 {
+    margin-bottom: 1.7rem;
+}
+
+.line-straight-taoBX {
+    height: 2px;
+    background: #1d38a1;
+    width: 16rem;
+    margin-top: 5px;
+}
+
+#stationProvince {
+    width: 80%;
+    background: #dde4ff;
+    border: none;
+    font-size: 1.4rem;
+    opacity: 1;
+}
